@@ -2,22 +2,12 @@
  #define BLACKKNIGHT_HPP
  #include <SFML/Graphics.hpp>
  #include "Animation.hpp"
+ #include "Soldier.hpp"
 
  class BlackKnight
+ : public Soldier
  {
     public:
     BlackKnight();
-    sf::Sprite& getSprite();
-    void update(sf::Time deltaTime);
-    void move(sf::Vector2f moveDir);
-    void isWalking();
-    void stapWalking();
-
-    private:
-    bool walking;
-    Animation idle;
-    Animation walk;
-    float speed;
-    sf::Sprite sprite;
  };
  #endif // BLACKKNIGHT_HPP

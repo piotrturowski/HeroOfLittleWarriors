@@ -10,15 +10,15 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(1000, 700), "SFML works!");
 
     BronzeSoldier bronzeSoldier;
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
-    silverKnight.getSprite().setPosition(1000,100);
-    blackKnight.getSprite().setPosition(600,600);
-    bronzeSoldier.getSprite().setPosition(sf::Vector2f(100,100));
+    silverKnight.getSprite().setPosition(0,300);
+    blackKnight.getSprite().setPosition(0,500);
+    bronzeSoldier.getSprite().setPosition(sf::Vector2f(0,100));
 
 
     sf::Clock clock;
@@ -38,27 +38,6 @@ int main()
             {
                 switch(event.key.code)
                 {
-
-                case sf::Keyboard::Up:
-                    {
-                        blackKnight.isWalking();
-                        break;
-                    }
-                case sf::Keyboard::Down:
-                    {
-                        blackKnight.isWalking();
-                        break;
-                    }
-                case sf::Keyboard::Left:
-                    {
-                        blackKnight.isWalking();
-                        break;
-                    }
-                case sf::Keyboard::Right:
-                    {
-                        blackKnight.isWalking();
-                        break;
-                    }
                     case sf::Keyboard::Escape:
                     {
                         window.close();
