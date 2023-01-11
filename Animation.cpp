@@ -29,3 +29,8 @@ sf::Texture& Animation::getTexture()
 {
     return ts.getCurrentTexture();
 }
+
+TextureSheet Animation::getTextureSheet()
+{
+    return ts;
+}

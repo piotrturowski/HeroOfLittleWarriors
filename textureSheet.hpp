@@ -13,9 +13,11 @@ public:
     sf::Texture& getCurrentTexture();
     void resetIteratorPosition();
     void nextPositionOfIterator();
+    bool isEndOfSheet();
 private:
     unsigned short size;
     unsigned short it;
+    bool endOfSheet;
     sf::Texture textureSheet[8];
 };
 #endif // TEXTURESHEET_HPP

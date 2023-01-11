@@ -20,11 +20,10 @@ int main()
     blackKnight.getSprite().setPosition(0,500);
     bronzeSoldier.getSprite().setPosition(sf::Vector2f(0,100));
 
-
     sf::Clock clock;
     sf::Time time;
     clock.restart();
-    sf::Vector2f s;
+
     window.setFramerateLimit(60);
     while (window.isOpen())
     {
@@ -102,6 +101,10 @@ int main()
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::J))
         {
             bronzeSoldier.attack();
+            if(blackKnight.getSprite().getGlobalBounds().intersects(bronzeSoldier.getSprite().getGlobalBounds()))
+            {
+                blackKnight.isHurting();
+            }
         }
         else
         {
@@ -140,6 +143,10 @@ int main()
         {
             blackKnight.move(sf::Vector2f(0,1));
         }
+
+
+
+
 
         silverKnight.update(time);
         bronzeSoldier.update(time);

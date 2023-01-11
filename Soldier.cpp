@@ -22,12 +22,21 @@ void Soldier::update(sf::Time deltaTime)
         attackAnim.update(deltaTime);
         sprite.setTexture(attackAnim.getTexture(),true);
     }
+    else if(hurting)
+    {
+        hurtAnim.update(deltaTime);
+        sprite.setTexture(hurtAnim.getTexture(),true);
+        if(hurtAnim.getTextureSheet().isEndOfSheet())
+        {
+            stopHurting();
+        }
+    }
     else
     {
         idleAnim.update(deltaTime);
         sprite.setTexture(idleAnim.getTexture(),true);
     }
-
+    setCenter();
 }
 
 void Soldier::isWalking()
@@ -78,13 +87,30 @@ void Soldier::setup()
 {
     walking = false;
     attacking = false;
+    hurting = false;
     speed = 4;
 
     idleAnim.setSwitchTime(0.1);
     walkAnim.setSwitchTime(0.1);
     attackAnim.setSwitchTime(0.1);
+    hurtAnim.setSwitchTime(0.1);
 
     sprite.setTexture(idleAnim.getTexture());
     sprite.setScale(0.4,0.4);
+    setCenter();
+}
+
+void Soldier::setCenter()
+{
     sprite.setOrigin(sprite.getGlobalBounds().width/2,sprite.getGlobalBounds().height/2);
+}
+
+void Soldier::isHurting()
+{
+    hurting = true;
+}
+
+void Soldier::stopHurting()
+{
+    hurting = false;
 }

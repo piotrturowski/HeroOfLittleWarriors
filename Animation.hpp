@@ -11,6 +11,7 @@ class Animation
         void setTextureSheet(TextureSheet textureSheet);
         void setSwitchTime(float speed);
         void update(sf::Time deltaTime);
+        TextureSheet getTextureSheet();
         sf::Texture& getTexture();
     private:
         sf::Time switchTime;

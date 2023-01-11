@@ -3,6 +3,7 @@ TextureSheet::TextureSheet()
 {
     it=0;
     size=0;
+    endOfSheet = false;
 }
 
 void TextureSheet::addTexture(std::string path)
@@ -18,14 +19,21 @@ sf::Texture& TextureSheet::getCurrentTexture()
 
 void TextureSheet::nextPositionOfIterator()
 {
-    if(it==size-1)
-    {
-        it= 0;
-    }
+    endOfSheet = false;
     it++;
+    if(it==size)
+    {
+        resetIteratorPosition();
+    }
 }
 
 void TextureSheet::resetIteratorPosition()
 {
     it = 0;
+    endOfSheet = true;
+}
+
+bool TextureSheet::isEndOfSheet()
+{
+    return endOfSheet;
 }
