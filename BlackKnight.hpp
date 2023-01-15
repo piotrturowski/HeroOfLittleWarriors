@@ -7,6 +7,8 @@
  class BlackKnight
  : public Soldier
  {
+ private:
+
     public:
     BlackKnight();
  };

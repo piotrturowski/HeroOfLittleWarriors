@@ -18,7 +18,9 @@ protected:
     void isWalking();
     void setup();
     void setCenter();
-
+    void hitBoxUpdate();
+    sf::RectangleShape hitBox;
+    sf::RectangleShape weponHitBox;
 
 public:
     Soldier();
@@ -31,7 +33,8 @@ public:
     void attack();
     void isHurting();
     void stopHurting();
-
+    void onCollision(sf::FloatRect enemyHitBox);
+    sf::FloatRect getWeponHitBox();
 
 
 

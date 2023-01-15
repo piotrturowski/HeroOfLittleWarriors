@@ -29,4 +29,5 @@ BronzeSoldier::BronzeSoldier()
     attackAnim.setTextureSheet(attackSheet);
 
     setup();
+
 }

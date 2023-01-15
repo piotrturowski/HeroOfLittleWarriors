@@ -1,8 +1,14 @@
 #include "Soldier.hpp"
 
+
+
 Soldier::Soldier()
+: hitBox(sf::Vector2f(270,300))
+, weponHitBox(sf::Vector2f(400,200))
 {
     setup();
+    hitBoxUpdate();
+
 }
 
 sf::Sprite& Soldier::getSprite()
@@ -16,6 +22,7 @@ void Soldier::update(sf::Time deltaTime)
     {
         walkAnim.update(deltaTime);
         sprite.setTexture(walkAnim.getTexture(),true);
+
     }
     else if(attacking)
     {
@@ -37,6 +44,7 @@ void Soldier::update(sf::Time deltaTime)
         sprite.setTexture(idleAnim.getTexture(),true);
     }
     setCenter();
+    hitBoxUpdate();
 }
 
 void Soldier::isWalking()
@@ -102,7 +110,9 @@ void Soldier::setup()
 
 void Soldier::setCenter()
 {
-    sprite.setOrigin(sprite.getGlobalBounds().width/2,sprite.getGlobalBounds().height/2);
+    sprite.setOrigin(sprite.getGlobalBounds().width,sprite.getGlobalBounds().height);
+    hitBox.setOrigin(hitBox.getGlobalBounds().width,sprite.getGlobalBounds().height);
+    weponHitBox.setOrigin(weponHitBox.getGlobalBounds().width,weponHitBox.getGlobalBounds().height);
 }
 
 void Soldier::isHurting()
@@ -113,4 +123,41 @@ void Soldier::isHurting()
 void Soldier::stopHurting()
 {
     hurting = false;
+}
+sf::FloatRect Soldier::getWeponHitBox()
+{
+    if(attacking)
+    {
+        return weponHitBox.getGlobalBounds();
+    }
+    return sf::FloatRect(0,0,0,0);
+}
+
+void Soldier::onCollision(sf::FloatRect enemyHitBox)
+{
+    if(hitBox.getGlobalBounds().intersects(enemyHitBox))
+    {
+         isHurting();
+         //std::cout << "is Collsion" << std::endl;
+    }
+    else
+    {
+        //std::cout << "not is Collsion" << std::endl;
+
+
+    }
+}
+
+void Soldier::hitBoxUpdate()
+{
+    hitBox.setPosition(sprite.getPosition());
+    hitBox.move(-hitBox.getOrigin().x/2*hitBox.getScale().x,hitBox.getOrigin().y*hitBox.getScale().y);
+    hitBox.setScale(sprite.getScale());
+
+    weponHitBox.setPosition(sprite.getPosition());
+
+    weponHitBox.move(hitBox.getOrigin().x*hitBox.getScale().x,0);
+    weponHitBox.setScale(sprite.getScale());
+    weponHitBox.setFillColor(sf::Color::Red);
+
 }

@@ -5,6 +5,9 @@
 #include "textureSheet.hpp"
 #include "Soldier.hpp"
 
+// top left sizex sizey hit box sizes
+//  175 25   235   329
+
 class BronzeSoldier
 : public Soldier
 {

@@ -5,6 +5,7 @@ SilverKnight::SilverKnight()
     TextureSheet idleSheet;
     TextureSheet walkingSheet;
     TextureSheet attackSheet;
+    TextureSheet hurtSheet;
 
     idleSheet.addTexture("art/Knight/PNG/silver_knight/1 IDLE_000.png");
     idleSheet.addTexture("art/Knight/PNG/silver_knight/1 IDLE_001.png");
@@ -29,6 +30,14 @@ SilverKnight::SilverKnight()
     attackSheet.addTexture("art/Knight/PNG/silver_knight/5 ATTACK_004.png");
 
     attackAnim.setTextureSheet(attackSheet);
+
+    hurtSheet.addTexture("art/Knight/PNG/silver_knight/7 HURT_000.png");
+    hurtSheet.addTexture("art/Knight/PNG/silver_knight/7 HURT_001.png");
+    hurtSheet.addTexture("art/Knight/PNG/silver_knight/7 HURT_002.png");
+    hurtSheet.addTexture("art/Knight/PNG/silver_knight/7 HURT_003.png");
+    hurtSheet.addTexture("art/Knight/PNG/silver_knight/7 HURT_004.png");
+
+    hurtAnim.setTextureSheet(hurtSheet);
 
 
     setup();

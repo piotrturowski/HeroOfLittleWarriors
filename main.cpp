@@ -5,6 +5,7 @@
 #include "BronzeSoldier.hpp"
 #include "BlackKnight.hpp"
 #include "silverKnight.hpp"
+#include "HitBox.hpp"
 
 
 
@@ -16,13 +17,15 @@ int main()
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
-    silverKnight.getSprite().setPosition(0,300);
-    blackKnight.getSprite().setPosition(0,500);
-    bronzeSoldier.getSprite().setPosition(sf::Vector2f(0,100));
+    silverKnight.getSprite().setPosition(600,300);
+    blackKnight.getSprite().setPosition(500,400);
+    bronzeSoldier.getSprite().setPosition(sf::Vector2f(300,200));
+
 
     sf::Clock clock;
     sf::Time time;
     clock.restart();
+
 
     window.setFramerateLimit(60);
     while (window.isOpen())
@@ -98,13 +101,15 @@ int main()
             }
         }
         time = clock.getElapsedTime();
+        blackKnight.onCollision(bronzeSoldier.getWeponHitBox());
+        silverKnight.onCollision(bronzeSoldier.getWeponHitBox());
+
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::J))
         {
             bronzeSoldier.attack();
-            if(blackKnight.getSprite().getGlobalBounds().intersects(bronzeSoldier.getSprite().getGlobalBounds()))
-            {
-                blackKnight.isHurting();
-            }
+
+
+
         }
         else
         {
@@ -155,9 +160,13 @@ int main()
 
         window.clear(sf::Color::Cyan);
 
+
+
         window.draw(bronzeSoldier.getSprite());
         window.draw(blackKnight.getSprite());
         window.draw(silverKnight.getSprite());
+
+
 
         window.display();
     }
