@@ -6,13 +6,15 @@
 #include "BlackKnight.hpp"
 #include "silverKnight.hpp"
 #include "HitBox.hpp"
-
+#include "Background.hpp"
 
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1000, 700), "SFML works!");
 
+    Background background;
+    background.setWindowSize(window.getSize());
     BronzeSoldier bronzeSoldier;
     BlackKnight blackKnight;
     SilverKnight silverKnight;
@@ -161,7 +163,7 @@ int main()
         window.clear(sf::Color::Cyan);
 
 
-
+        window.draw(background.getSprite());
         window.draw(bronzeSoldier.getSprite());
         window.draw(blackKnight.getSprite());
         window.draw(silverKnight.getSprite());
