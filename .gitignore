@@ -5,3 +5,6 @@
 *.cbp
 *.depend
 *.depend
+*.o
+*.o
+*.o

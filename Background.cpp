@@ -7,7 +7,10 @@ Background::Background()
 
 void Background::loadBackground(std::string path)
 {
-    texture.loadFromFile(path);
+    if(!texture.loadFromFile(path))
+    {
+        std::cout << "error" << std::endl;
+    }
     sprite.setTexture(texture);
 }
 

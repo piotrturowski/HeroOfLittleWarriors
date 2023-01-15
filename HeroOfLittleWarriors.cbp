@@ -39,12 +39,16 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add directory="C:/Users/Ula/OneDrive/Dokumenty/Projekty/SFML-2.5.1/include" />
+			<Add directory="C:/Users/Piotr/Documents/Projekty/SFML-2.5.1/include" />
 		</Compiler>
 		<Linker>
 			<Add directory="C:/Users/Ula/OneDrive/Dokumenty/Projekty/SFML-2.5.1/lib" />
+			<Add directory="C:/Users/Piotr/Documents/Projekty/SFML-2.5.1/lib" />
 		</Linker>
 		<Unit filename="Animation.cpp" />
 		<Unit filename="Animation.hpp" />
+		<Unit filename="Background.cpp" />
+		<Unit filename="Background.hpp" />
 		<Unit filename="BlackKnight.cpp" />
 		<Unit filename="BlackKnight.hpp" />
 		<Unit filename="BronzeSoldier.cpp" />

@@ -11,10 +11,11 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1000, 700), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
 
     Background background;
     background.setWindowSize(window.getSize());
+
     BronzeSoldier bronzeSoldier;
     BlackKnight blackKnight;
     SilverKnight silverKnight;
@@ -109,9 +110,6 @@ int main()
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::J))
         {
             bronzeSoldier.attack();
-
-
-
         }
         else
         {
@@ -161,7 +159,6 @@ int main()
         clock.restart();
 
         window.clear(sf::Color::Cyan);
-
 
         window.draw(background.getSprite());
         window.draw(bronzeSoldier.getSprite());
