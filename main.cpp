@@ -24,7 +24,7 @@ int main()
     SilverKnight silverKnight;
 
     silverKnight.getSprite().setPosition(600,300);
-    blackKnight.getSprite().setPosition(500,400);
+    blackKnight.getSprite().setPosition(500,500);
     bronzeSoldier.getSprite().setPosition(sf::Vector2f(300,200));
 
 
@@ -153,9 +153,6 @@ int main()
         }
 
 
-
-
-
         silverKnight.update(time);
         bronzeSoldier.update(time);
         blackKnight.update(time);
@@ -164,10 +161,13 @@ int main()
         window.clear(sf::Color::Cyan);
 
         window.draw(background.getSprite());
+
+
         window.draw(bronzeSoldier.getSprite());
         window.draw(blackKnight.getSprite());
         window.draw(silverKnight.getSprite());
         window.draw(grass.getSprite());
+
 
 
 

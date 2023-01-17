@@ -38,4 +38,7 @@ BlackKnight::BlackKnight()
     attackAnim.setTextureSheet(attackSheet);
     hurtAnim.setTextureSheet(hurtSheet);
     setup();
+
+    weponHitBox.setSize(sf::Vector2f(730,300));
+
 }

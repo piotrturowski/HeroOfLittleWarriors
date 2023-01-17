@@ -4,7 +4,7 @@
 
 Soldier::Soldier()
 : hitBox(sf::Vector2f(270,300))
-, weponHitBox(sf::Vector2f(400,200))
+, weponHitBox(sf::Vector2f(200,200))
 {
     setup();
     hitBoxUpdate();
@@ -147,6 +147,9 @@ void Soldier::onCollision(sf::FloatRect enemyHitBox)
 
     }
 }
+
+
+
 
 void Soldier::hitBoxUpdate()
 {

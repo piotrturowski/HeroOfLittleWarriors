@@ -30,4 +30,5 @@ BronzeSoldier::BronzeSoldier()
 
     setup();
 
+    weponHitBox.setSize(sf::Vector2f(440,450));
 }
