@@ -8,3 +8,6 @@
 *.o
 *.o
 *.o
+*.exe
+*.depend
+*.o
