@@ -39,6 +39,7 @@ SilverKnight::SilverKnight()
 
     hurtAnim.setTextureSheet(hurtSheet);
 
-
     setup();
+
+    weponHitBox.setSize(sf::Vector2f(350,400));
 }

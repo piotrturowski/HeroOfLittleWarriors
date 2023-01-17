@@ -22,6 +22,7 @@ protected:
     sf::RectangleShape hitBox;
     sf::RectangleShape weponHitBox;
 
+
 public:
     Soldier();
     sf::Sprite& getSprite();
