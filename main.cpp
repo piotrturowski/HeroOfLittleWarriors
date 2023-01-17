@@ -14,8 +14,11 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
 
     Background background;
-    background.setWindowSize(window.getSize());
+    Background grass;
+    grass.loadBackground("art/Backgrounds/game_background_2/layers/front_decor.png");
 
+    background.setWindowSize(window.getSize());
+    grass.setWindowSize(window.getSize());
     BronzeSoldier bronzeSoldier;
     BlackKnight blackKnight;
     SilverKnight silverKnight;
@@ -164,6 +167,7 @@ int main()
         window.draw(bronzeSoldier.getSprite());
         window.draw(blackKnight.getSprite());
         window.draw(silverKnight.getSprite());
+        window.draw(grass.getSprite());
 
 
 
