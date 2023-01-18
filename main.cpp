@@ -140,19 +140,19 @@ int main()
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
         {
-            blackKnight.move(sf::Vector2f(1,0));
+            blackKnight.move(sf::Vector2f(1,0),map.getRectOfBattleArea());
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         {
-            blackKnight.move(sf::Vector2f(-1,0));
+            blackKnight.move(sf::Vector2f(-1,0),map.getRectOfBattleArea());
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         {
-            blackKnight.move(sf::Vector2f(0,-1));
+            blackKnight.move(sf::Vector2f(0,-1),map.getRectOfBattleArea());
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
         {
-            blackKnight.move(sf::Vector2f(0,1));
+            blackKnight.move(sf::Vector2f(0,1),map.getRectOfBattleArea());
         }
 
 
@@ -164,7 +164,6 @@ int main()
         window.clear(sf::Color::Cyan);
 
         window.draw(background.getSprite());
-         window.draw(map.battleArea);
 
         window.draw(bronzeSoldier.getSprite());
         window.draw(blackKnight.getSprite());

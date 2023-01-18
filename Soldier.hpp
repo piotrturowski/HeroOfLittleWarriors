@@ -19,6 +19,8 @@ protected:
     void setup();
     void setCenter();
     void hitBoxUpdate();
+    void move(sf::Vector2f moveDir);
+    void blokadeMove(sf::Vector2f& moveDir,sf::FloatRect battleArea);
     sf::RectangleShape hitBox;
     sf::RectangleShape weponHitBox;
 
@@ -27,7 +29,7 @@ public:
     Soldier();
     sf::Sprite& getSprite();
     void update(sf::Time deltaTime);
-    void move(sf::Vector2f moveDir);
+
     void move(sf::Vector2f moveDir,sf::FloatRect battleArea);
     void stapWalking();
     void isAttacking();

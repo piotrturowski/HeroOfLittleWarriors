@@ -68,31 +68,44 @@ void Soldier::stapAttacking()
 
 void Soldier::move(sf::Vector2f moveDir)
 {
-    if(moveDir.y != 0 || moveDir.x != 0)
-    {
-        isWalking();
-        moveDir = sf::Vector2f(moveDir.x*speed,moveDir.y*speed);
-        sprite.move(moveDir);
+    isWalking();
+    moveDir = sf::Vector2f(moveDir.x*speed,moveDir.y*speed);
 
-        if(moveDir.x >0)
-        {
-            sprite.setScale(0.4,0.4);
-        }
-        else if(moveDir.x < 0)
-        {
-            sprite.setScale(-0.4,0.4);
-        }
+    sprite.move(moveDir);
+
+    if(moveDir.x >0)
+    {
+        sprite.setScale(0.4,0.4);
+    }
+    else if(moveDir.x < 0)
+    {
+        sprite.setScale(-0.4,0.4);
     }
 }
 
 void Soldier::move(sf::Vector2f moveDir,sf::FloatRect battleArea)
 {
-    if(battleArea.top < sprite.getPosition().y&&battleArea.top+battleArea.height > sprite.getPosition().y)
+    blokadeMove(moveDir,battleArea);
+    move(moveDir);
+}
+
+void Soldier::blokadeMove(sf::Vector2f& moveDir,sf::FloatRect battleArea)
+{
+    if(battleArea.top > hitBox.getGlobalBounds().top+hitBox.getGlobalBounds().height&& moveDir.y < 0)
     {
-        if(battleArea.left < sprite.getPosition().x&& battleArea.left+battleArea.width > sprite.getPosition().x)
-        {
-            move(moveDir);
-        }
+        moveDir.y = 0;
+    }
+    else if(battleArea.top+battleArea.height < hitBox.getGlobalBounds().top+hitBox.getGlobalBounds().height&& moveDir.y > 0)
+    {
+        moveDir.y = 0;
+    }
+    else if(battleArea.left > hitBox.getGlobalBounds().left&& moveDir.x < 0)
+    {
+        moveDir.x = 0;
+    }
+    else if(battleArea.left+battleArea.width < hitBox.getGlobalBounds().left+hitBox.getGlobalBounds().width&& moveDir.x > 0)
+    {
+        moveDir.x = 0;
     }
 }
 

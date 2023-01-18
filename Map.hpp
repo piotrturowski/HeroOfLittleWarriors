@@ -5,12 +5,13 @@
 
 class Map : public Background
 {
-
+protected:
+    sf::RectangleShape battleArea;
 public:
     Map();
     sf::FloatRect getRectOfBattleArea();
     void setWindowSize(sf::Vector2u size);
-        sf::RectangleShape battleArea;
+
 
 
 };
