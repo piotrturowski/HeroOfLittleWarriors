@@ -85,6 +85,17 @@ void Soldier::move(sf::Vector2f moveDir)
     }
 }
 
+void Soldier::move(sf::Vector2f moveDir,sf::FloatRect battleArea)
+{
+    if(battleArea.top < sprite.getPosition().y&&battleArea.top+battleArea.height > sprite.getPosition().y)
+    {
+        if(battleArea.left < sprite.getPosition().x&& battleArea.left+battleArea.width > sprite.getPosition().x)
+        {
+            move(moveDir);
+        }
+    }
+}
+
 void Soldier::attack()
 {
     isAttacking();

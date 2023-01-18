@@ -6,6 +6,7 @@
 
 class Background
 {
+protected:
     sf::Sprite sprite;
     sf::Texture texture;
 

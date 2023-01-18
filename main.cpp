@@ -7,12 +7,15 @@
 #include "silverKnight.hpp"
 #include "HitBox.hpp"
 #include "Background.hpp"
+#include "Map.hpp"
 
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
 
+    Map map;
+    map.setWindowSize(window.getSize());
     Background background;
     Background grass;
     grass.loadBackground("art/Backgrounds/game_background_2/layers/front_decor.png");
@@ -118,19 +121,19 @@ int main()
         {
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
             {
-                bronzeSoldier.move(sf::Vector2f(1,0));
+                bronzeSoldier.move(sf::Vector2f(1,0),map.getRectOfBattleArea());
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
             {
-                bronzeSoldier.move(sf::Vector2f(-1,0));
+                bronzeSoldier.move(sf::Vector2f(-1,0),map.getRectOfBattleArea());
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
             {
-                bronzeSoldier.move(sf::Vector2f(0,-1));
+                bronzeSoldier.move(sf::Vector2f(0,-1),map.getRectOfBattleArea());
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
             {
-                bronzeSoldier.move(sf::Vector2f(0,1));
+                bronzeSoldier.move(sf::Vector2f(0,1),map.getRectOfBattleArea());
             }
         }
 
@@ -161,11 +164,14 @@ int main()
         window.clear(sf::Color::Cyan);
 
         window.draw(background.getSprite());
-
+         window.draw(map.battleArea);
 
         window.draw(bronzeSoldier.getSprite());
         window.draw(blackKnight.getSprite());
         window.draw(silverKnight.getSprite());
+
+
+
         window.draw(grass.getSprite());
 
 

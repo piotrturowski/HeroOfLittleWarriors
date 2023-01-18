@@ -28,6 +28,7 @@ public:
     sf::Sprite& getSprite();
     void update(sf::Time deltaTime);
     void move(sf::Vector2f moveDir);
+    void move(sf::Vector2f moveDir,sf::FloatRect battleArea);
     void stapWalking();
     void isAttacking();
     void stapAttacking();
