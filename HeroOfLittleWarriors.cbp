@@ -57,6 +57,8 @@
 		<Unit filename="Human.hpp" />
 		<Unit filename="ManagerAnimation.cpp" />
 		<Unit filename="ManagerAnimation.hpp" />
+		<Unit filename="Map.cpp" />
+		<Unit filename="Map.hpp" />
 		<Unit filename="Soldier.cpp" />
 		<Unit filename="Soldier.hpp" />
 		<Unit filename="Sprite.cpp" />

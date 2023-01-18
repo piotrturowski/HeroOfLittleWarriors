@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1673461958 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1673989897 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -7,6 +7,9 @@
 	"BronzeSoldier.hpp"
 	"BlackKnight.hpp"
 	"silverKnight.hpp"
+	"HitBox.hpp"
+	"Background.hpp"
+	"Map.hpp"
 
 1525808418 c:\users\ula\onedrive\dokumenty\projekty\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -417,28 +420,28 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1673460931 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.hpp
+1673989848 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.hpp
 	<SFML/Graphics.hpp>
 	"Animation.hpp"
 
-1673460931 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animation.hpp
+1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animation.hpp
 	<iostream>
 	<vector>
 	"textureSheet.hpp"
 
-1673460932 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\texturesheet.hpp
+1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\texturesheet.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<vector>
 	<string>
 
-1673461618 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\bronzesoldier.hpp
+1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\bronzesoldier.hpp
 	<SFML/Graphics.hpp>
 	"Animation.hpp"
 	"textureSheet.hpp"
 	"Soldier.hpp"
 
-1673462566 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\blackknight.hpp
+1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\blackknight.hpp
 	<SFML/Graphics.hpp>
 	"Animation.hpp"
 	"Soldier.hpp"
@@ -446,13 +449,13 @@
 1673460932 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\silverknight.hpp
 	"Soldier.hpp"
 
-1673460931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animation.cpp
+1673796630 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animation.cpp
 	"Animation.hpp"
 
-1673462566 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\blackknight.cpp
+1673960407 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\blackknight.cpp
 	"BlackKnight.hpp"
 
-1673462164 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\bronzesoldier.cpp
+1673960407 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\bronzesoldier.cpp
 	"BronzeSoldier.hpp"
 
 1673460931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\human.cpp
@@ -470,10 +473,10 @@
 	<SFML/Graphics.hpp>
 	"Animation.hpp"
 
-1673460932 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\silverknight.cpp
+1673960407 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\silverknight.cpp
 	"silverKnight.hpp"
 
-1673460931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.cpp
+1673989866 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.cpp
 	"Soldier.hpp"
 
 1673460931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\sprite.cpp
@@ -487,7 +490,7 @@
 
 1673460931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\system.cpp
 
-1673460932 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\texturesheet.cpp
+1673796630 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\texturesheet.cpp
 	"textureSheet.hpp"
 
 1673807816 source:c:\users\piotr\documents\github\herooflittlewarriors\animation.cpp
@@ -992,5 +995,23 @@
 	<SFML/Window/GlResource.hpp>
 
 1673814040 source:c:\users\piotr\documents\github\herooflittlewarriors\background.cpp
+	"Background.hpp"
+
+1673987638 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
+	"Background.hpp"
+
+1673988663 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<string>
+
+1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hitbox.hpp
+	<SFML/Graphics.hpp>
+
+1673989181 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
+	"Map.hpp"
+
+1673989101 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
+	<SFML/Graphics.hpp>
 	"Background.hpp"
 
