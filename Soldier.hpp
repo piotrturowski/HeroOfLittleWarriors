@@ -1,6 +1,7 @@
 #ifndef SOLDIER_HPP
 #define SOLDIER_HPP
 #include <SFML/Graphics.hpp>
+#include <cmath>
 #include "Animation.hpp"
 
 class Soldier
@@ -25,11 +26,12 @@ protected:
     sf::RectangleShape weponHitBox;
 
 
+
 public:
     Soldier();
     sf::Sprite& getSprite();
     void update(sf::Time deltaTime);
-
+    void setScale(sf::Vector2u size);
     void move(sf::Vector2f moveDir,sf::FloatRect battleArea);
     void stapWalking();
     void isAttacking();

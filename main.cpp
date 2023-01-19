@@ -12,7 +12,8 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
+    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Hero of Little Warriors");
+
 
     Map map;
     map.setWindowSize(window.getSize());
@@ -26,6 +27,9 @@ int main()
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
+
+
+
     silverKnight.getSprite().setPosition(600,300);
     blackKnight.getSprite().setPosition(500,500);
     bronzeSoldier.getSprite().setPosition(sf::Vector2f(300,200));
@@ -34,6 +38,12 @@ int main()
     sf::Clock clock;
     sf::Time time;
     clock.restart();
+    time = clock.getElapsedTime();
+
+    bronzeSoldier.setScale(window.getSize());
+    blackKnight.setScale(window.getSize());
+    silverKnight.setScale(window.getSize());
+
 
 
     window.setFramerateLimit(60);
@@ -156,10 +166,13 @@ int main()
         }
 
 
+
         silverKnight.update(time);
         bronzeSoldier.update(time);
         blackKnight.update(time);
         clock.restart();
+
+
 
         window.clear(sf::Color::Cyan);
 

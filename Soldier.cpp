@@ -2,6 +2,7 @@
 
 
 
+
 Soldier::Soldier()
 : hitBox(sf::Vector2f(270,300))
 , weponHitBox(sf::Vector2f(200,200))
@@ -75,11 +76,12 @@ void Soldier::move(sf::Vector2f moveDir)
 
     if(moveDir.x >0)
     {
-        sprite.setScale(0.4,0.4);
+        sprite.setScale(sprite.getScale().y,sprite.getScale().y);
     }
     else if(moveDir.x < 0)
     {
-        sprite.setScale(-0.4,0.4);
+        //on scale X is included y because he return always positive number and
+        sprite.setScale(-sprite.getScale().y,sprite.getScale().y);
     }
 }
 
@@ -128,8 +130,8 @@ void Soldier::setup()
     hurtAnim.setSwitchTime(0.1);
 
     sprite.setTexture(idleAnim.getTexture());
-    sprite.setScale(0.4,0.4);
     setCenter();
+
 }
 
 void Soldier::setCenter()
@@ -172,7 +174,10 @@ void Soldier::onCollision(sf::FloatRect enemyHitBox)
     }
 }
 
-
+void Soldier::setScale(sf::Vector2u size)
+{
+    sprite.setScale((size.y/520)/5.35,(size.y/520)/5.35);
+}
 
 
 void Soldier::hitBoxUpdate()
