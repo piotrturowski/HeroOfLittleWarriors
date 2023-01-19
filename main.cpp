@@ -12,16 +12,17 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Hero of Little Warriors");
+    sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
 
+    sf::View view;
+    view.setSize(window.getSize().x,window.getSize().y);
+    window.setView(view);
 
     Map map;
     map.setWindowSize(window.getSize());
-    Background background;
     Background grass;
     grass.loadBackground("art/Backgrounds/game_background_2/layers/front_decor.png");
 
-    background.setWindowSize(window.getSize());
     grass.setWindowSize(window.getSize());
     BronzeSoldier bronzeSoldier;
     BlackKnight blackKnight;
@@ -172,11 +173,12 @@ int main()
         blackKnight.update(time);
         clock.restart();
 
-
+        view.setCenter(bronzeSoldier.getSprite().getPosition());
+        window.setView(view);
 
         window.clear(sf::Color::Cyan);
 
-        window.draw(background.getSprite());
+        window.draw(map.getSprite());
 
         window.draw(bronzeSoldier.getSprite());
         window.draw(blackKnight.getSprite());

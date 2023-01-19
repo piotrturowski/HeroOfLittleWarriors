@@ -40,5 +40,5 @@ BlackKnight::BlackKnight()
     setup();
 
     weponHitBox.setSize(sf::Vector2f(730,300));
-
+    sprite.setTexture(idleAnim.getTexture(),true);
 }

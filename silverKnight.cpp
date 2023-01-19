@@ -42,4 +42,5 @@ SilverKnight::SilverKnight()
     setup();
 
     weponHitBox.setSize(sf::Vector2f(350,400));
+    sprite.setTexture(idleAnim.getTexture(),true);
 }

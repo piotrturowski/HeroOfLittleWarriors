@@ -113,8 +113,15 @@ void Soldier::blokadeMove(sf::Vector2f& moveDir,sf::FloatRect battleArea)
 
 void Soldier::attack()
 {
-    isAttacking();
-
+    if(hurting)
+    {
+        stapAttacking();
+    }
+    else
+    {
+        isAttacking();
+        stapWalking();
+    }
 }
 
 void Soldier::setup()
@@ -176,7 +183,10 @@ void Soldier::onCollision(sf::FloatRect enemyHitBox)
 
 void Soldier::setScale(sf::Vector2u size)
 {
-    sprite.setScale((size.y/520)/5.35,(size.y/520)/5.35);
+    float scale;
+    scale = size.y/4;
+    scale = scale/520;
+    sprite.setScale(scale,scale);
 }
 
 

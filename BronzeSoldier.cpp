@@ -31,4 +31,5 @@ BronzeSoldier::BronzeSoldier()
     setup();
 
     weponHitBox.setSize(sf::Vector2f(440,450));
+    sprite.setTexture(idleAnim.getTexture(),true);
 }

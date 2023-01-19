@@ -16,8 +16,9 @@ sf::FloatRect Map::getRectOfBattleArea()
 
 void Map::setWindowSize(sf::Vector2u size)
 {
-    sprite.setScale(size.x/sprite.getLocalBounds().width,size.y/sprite.getLocalBounds().height);
-    battleArea.setSize(sf::Vector2f(size.x,size.y/1.7));
+    float scale = size.y/sprite.getLocalBounds().height;
+    sprite.setScale(scale,scale);
+    battleArea.setSize(sf::Vector2f(sprite.getGlobalBounds().width,sprite.getGlobalBounds().height/1.7));
     battleArea.setPosition(0,size.y/3);
 }
 
