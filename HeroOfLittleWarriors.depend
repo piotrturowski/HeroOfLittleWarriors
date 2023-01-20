@@ -507,7 +507,7 @@
 	<vector>
 	<string>
 
-1673807816 source:c:\users\piotr\documents\github\herooflittlewarriors\blackknight.cpp
+1674223174 source:c:\users\piotr\documents\github\herooflittlewarriors\blackknight.cpp
 	"BlackKnight.hpp"
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\blackknight.hpp
@@ -515,11 +515,12 @@
 	"Animation.hpp"
 	"Soldier.hpp"
 
-1673807816 c:\users\piotr\documents\github\herooflittlewarriors\soldier.hpp
+1674140539 c:\users\piotr\documents\github\herooflittlewarriors\soldier.hpp
 	<SFML/Graphics.hpp>
+	<cmath>
 	"Animation.hpp"
 
-1673807816 source:c:\users\piotr\documents\github\herooflittlewarriors\bronzesoldier.cpp
+1674223174 source:c:\users\piotr\documents\github\herooflittlewarriors\bronzesoldier.cpp
 	"BronzeSoldier.hpp"
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\bronzesoldier.hpp
@@ -533,7 +534,7 @@
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\human.hpp
 
-1673814222 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
+1674231147 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -543,6 +544,7 @@
 	"silverKnight.hpp"
 	"HitBox.hpp"
 	"Background.hpp"
+	"Map.hpp"
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\silverknight.hpp
 	"Soldier.hpp"
@@ -550,7 +552,7 @@
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\hitbox.hpp
 	<SFML/Graphics.hpp>
 
-1673812133 c:\users\piotr\documents\github\herooflittlewarriors\background.hpp
+1674119929 c:\users\piotr\documents\github\herooflittlewarriors\background.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -565,10 +567,10 @@
 	<SFML/Graphics.hpp>
 	"Animation.hpp"
 
-1673807816 source:c:\users\piotr\documents\github\herooflittlewarriors\silverknight.cpp
+1674223174 source:c:\users\piotr\documents\github\herooflittlewarriors\silverknight.cpp
 	"silverKnight.hpp"
 
-1673807816 source:c:\users\piotr\documents\github\herooflittlewarriors\soldier.cpp
+1674223174 source:c:\users\piotr\documents\github\herooflittlewarriors\soldier.cpp
 	"Soldier.hpp"
 
 1673807816 source:c:\users\piotr\documents\github\herooflittlewarriors\sprite.cpp
@@ -994,7 +996,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1673814040 source:c:\users\piotr\documents\github\herooflittlewarriors\background.cpp
+1674119929 source:c:\users\piotr\documents\github\herooflittlewarriors\background.cpp
 	"Background.hpp"
 
 1673987638 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
@@ -1014,4 +1016,13 @@
 1673989101 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
 	<SFML/Graphics.hpp>
 	"Background.hpp"
+
+1674233452 source:c:\users\piotr\documents\github\herooflittlewarriors\map.cpp
+	"Map.hpp"
+
+1674232862 c:\users\piotr\documents\github\herooflittlewarriors\map.hpp
+	<SFML/Graphics.hpp>
+	"Background.hpp"
+	<iostream>
+	<vector>
 

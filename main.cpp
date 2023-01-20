@@ -20,6 +20,8 @@ int main()
 
     Map map;
     map.setWindowSize(window.getSize());
+    map.setPosition();
+
     Background grass;
     grass.loadBackground("art/Backgrounds/game_background_2/layers/front_decor.png");
 
@@ -31,9 +33,9 @@ int main()
 
 
 
-    silverKnight.getSprite().setPosition(600,300);
-    blackKnight.getSprite().setPosition(500,500);
-    bronzeSoldier.getSprite().setPosition(sf::Vector2f(300,200));
+    silverKnight.getSprite().setPosition(600,100);
+    blackKnight.getSprite().setPosition(500,0);
+    bronzeSoldier.getSprite().setPosition(sf::Vector2f(0,0));
 
 
     sf::Clock clock;
@@ -178,7 +180,13 @@ int main()
 
         window.clear(sf::Color::Cyan);
 
-        window.draw(map.getSprite());
+        std::vector <sf::Sprite> sprite = map.getSprite();
+        for(int i = 0; i <= 3; i++)
+        {
+
+            window.draw(sprite[i]);
+        }
+
 
         window.draw(bronzeSoldier.getSprite());
         window.draw(blackKnight.getSprite());
