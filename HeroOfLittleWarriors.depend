@@ -534,7 +534,7 @@
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\human.hpp
 
-1674231147 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
+1674237504 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -545,6 +545,7 @@
 	"HitBox.hpp"
 	"Background.hpp"
 	"Map.hpp"
+	"Camera.hpp"
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\silverknight.hpp
 	"Soldier.hpp"
@@ -1025,4 +1026,11 @@
 	"Background.hpp"
 	<iostream>
 	<vector>
+
+1674252181 source:c:\users\piotr\documents\github\herooflittlewarriors\camera.cpp
+	"Camera.hpp"
+
+1674237441 c:\users\piotr\documents\github\herooflittlewarriors\camera.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
 

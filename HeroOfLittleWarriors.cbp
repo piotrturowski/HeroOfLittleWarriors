@@ -53,6 +53,8 @@
 		<Unit filename="BlackKnight.hpp" />
 		<Unit filename="BronzeSoldier.cpp" />
 		<Unit filename="BronzeSoldier.hpp" />
+		<Unit filename="Camera.cpp" />
+		<Unit filename="Camera.hpp" />
 		<Unit filename="Human.cpp" />
 		<Unit filename="Human.hpp" />
 		<Unit filename="ManagerAnimation.cpp" />

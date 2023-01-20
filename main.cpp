@@ -8,15 +8,16 @@
 #include "HitBox.hpp"
 #include "Background.hpp"
 #include "Map.hpp"
+#include "Camera.hpp"
 
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
 
-    sf::View view;
-    view.setSize(window.getSize().x,window.getSize().y);
-    window.setView(view);
+    Camera cam;
+    cam.setSize(window.getSize());
+    window.setView(cam.getView());
 
     Map map;
     map.setWindowSize(window.getSize());
@@ -175,8 +176,9 @@ int main()
         blackKnight.update(time);
         clock.restart();
 
-        view.setCenter(bronzeSoldier.getSprite().getPosition());
-        window.setView(view);
+        cam.update(bronzeSoldier.getSprite().getPosition(), map.getRectOfBattleArea());
+        window.setView(cam.getView());
+
 
         window.clear(sf::Color::Cyan);
 
