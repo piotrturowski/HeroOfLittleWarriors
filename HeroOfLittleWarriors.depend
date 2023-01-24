@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1673989897 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1674574436 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -10,6 +10,8 @@
 	"HitBox.hpp"
 	"Background.hpp"
 	"Map.hpp"
+	"Camera.hpp"
+	"Print.hpp"
 
 1525808418 c:\users\ula\onedrive\dokumenty\projekty\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -420,8 +422,9 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1673989848 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.hpp
+1674158437 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.hpp
 	<SFML/Graphics.hpp>
+	<cmath>
 	"Animation.hpp"
 
 1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animation.hpp
@@ -452,10 +455,10 @@
 1673796630 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animation.cpp
 	"Animation.hpp"
 
-1673960407 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\blackknight.cpp
+1674158317 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\blackknight.cpp
 	"BlackKnight.hpp"
 
-1673960407 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\bronzesoldier.cpp
+1674158317 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\bronzesoldier.cpp
 	"BronzeSoldier.hpp"
 
 1673460931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\human.cpp
@@ -473,10 +476,10 @@
 	<SFML/Graphics.hpp>
 	"Animation.hpp"
 
-1673960407 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\silverknight.cpp
+1674158317 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\silverknight.cpp
 	"silverKnight.hpp"
 
-1673989866 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.cpp
+1674158437 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.cpp
 	"Soldier.hpp"
 
 1673460931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\sprite.cpp
@@ -1000,10 +1003,10 @@
 1674119929 source:c:\users\piotr\documents\github\herooflittlewarriors\background.cpp
 	"Background.hpp"
 
-1673987638 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
+1674206450 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
 	"Background.hpp"
 
-1673988663 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.hpp
+1674206450 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -1011,12 +1014,14 @@
 1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hitbox.hpp
 	<SFML/Graphics.hpp>
 
-1673989181 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
+1674492460 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
 	"Map.hpp"
 
-1673989101 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
+1674492460 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
 	<SFML/Graphics.hpp>
 	"Background.hpp"
+	<iostream>
+	<vector>
 
 1674233452 source:c:\users\piotr\documents\github\herooflittlewarriors\map.cpp
 	"Map.hpp"
@@ -1032,5 +1037,20 @@
 
 1674237441 c:\users\piotr\documents\github\herooflittlewarriors\camera.hpp
 	<SFML/Graphics.hpp>
+	<iostream>
+
+1674492459 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\camera.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1674492459 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\camera.cpp
+	"Camera.hpp"
+
+1674496540 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.cpp
+	"Print.hpp"
+
+1674574703 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.hpp
+	<SFML/Graphics.hpp>
+	<vector>
 	<iostream>
 

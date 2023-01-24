@@ -9,12 +9,22 @@
 #include "Background.hpp"
 #include "Map.hpp"
 #include "Camera.hpp"
+#include "Print.hpp"
+
+
+// TODO (Ula#1#): print system ...
+//
+
+// TODO (Ula#1#): add grass to map
+
+// TODO (Ula#1#): Add Tower
 
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
 
+    Print print;
     Camera cam;
     cam.setSize(window.getSize());
     window.setView(cam.getView());
@@ -180,22 +190,22 @@ int main()
         window.setView(cam.getView());
 
 
-        window.clear(sf::Color::Cyan);
+        window.clear(sf::Color::Black);
 
         std::vector <sf::Sprite> sprite = map.getSprite();
         for(int i = 0; i <= 3; i++)
         {
-
             window.draw(sprite[i]);
         }
 
+        print.addSprite(bronzeSoldier.getSprite());
+        print.addSprite(blackKnight.getSprite());
+        print.addSprite(silverKnight.getSprite());
 
-        window.draw(bronzeSoldier.getSprite());
-        window.draw(blackKnight.getSprite());
-        window.draw(silverKnight.getSprite());
+        print.sort();
 
 
-
+        print.draw(&window);
         window.draw(grass.getSprite());
 
 
