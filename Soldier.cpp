@@ -184,7 +184,7 @@ void Soldier::onCollision(sf::FloatRect enemyHitBox)
 void Soldier::setScale(sf::Vector2u size)
 {
     float scale;
-    scale = size.y/4;
+    scale = size.y/5;
     scale = scale/520;
     sprite.setScale(scale,scale);
 }

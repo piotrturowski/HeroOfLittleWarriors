@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1674581931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1674591633 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -12,6 +12,7 @@
 	"Map.hpp"
 	"Camera.hpp"
 	"Print.hpp"
+	"Tower.hpp"
 
 1525808418 c:\users\ula\onedrive\dokumenty\projekty\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1003,10 +1004,10 @@
 1674119929 source:c:\users\piotr\documents\github\herooflittlewarriors\background.cpp
 	"Background.hpp"
 
-1674580966 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
+1674588669 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
 	"Background.hpp"
 
-1674580952 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.hpp
+1674588669 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -1014,10 +1015,10 @@
 1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hitbox.hpp
 	<SFML/Graphics.hpp>
 
-1674582023 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
+1674588670 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
 	"Map.hpp"
 
-1674581931 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
+1674588670 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
 	<SFML/Graphics.hpp>
 	"Background.hpp"
 	<iostream>
@@ -1039,18 +1040,27 @@
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1674492459 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\camera.hpp
+1674588669 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\camera.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1674492459 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\camera.cpp
+1674588669 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\camera.cpp
 	"Camera.hpp"
 
-1674579126 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.cpp
+1674588670 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.cpp
 	"Print.hpp"
 
-1674579126 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.hpp
+1674588670 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.hpp
 	<SFML/Graphics.hpp>
 	<vector>
 	<iostream>
+
+1674591633 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\tower.cpp
+	"Tower.hpp"
+
+1674591121 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\tower.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1674591741 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hightower.cpp
 

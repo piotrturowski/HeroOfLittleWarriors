@@ -10,15 +10,7 @@
 #include "Map.hpp"
 #include "Camera.hpp"
 #include "Print.hpp"
-
-
-// TODO (Ula#1#): print system ...
-//
-
-// TODO (Ula#1#): add grass to map
-
-// TODO (Ula#1#): Add Tower
-
+#include "Tower.hpp"
 
 int main()
 {
@@ -37,7 +29,14 @@ int main()
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
-
+    Tower tower;
+    Tower tower2;
+    tower.loadFromFile("art/Tower/small Tower.png");
+    tower2.loadFromFile("art/Tower/high Tower.png");
+    tower.setScale(window.getSize().y);
+    tower2.setScale(window.getSize().y);
+    tower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/3,map.getRectOfBattleArea().top));
+    tower2.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/4,map.getRectOfBattleArea().top));
 
 
     silverKnight.getSprite().setPosition(600,100);
@@ -197,7 +196,8 @@ int main()
 
 
         window.clear(sf::Color::Black);
-
+        print.addSprite(tower2.getSprite());
+        print.addSprite(tower.getSprite());
         print.addSprite(map.getBackgroundSprite());
         print.draw(&window);
 
@@ -210,10 +210,6 @@ int main()
 
         print.addSprite(map.getGrassSprite());
         print.draw(&window);
-        //print.addSprite(map.getGrassSprite());
-        //print.draw(&window);
-
-
 
         window.display();
     }
