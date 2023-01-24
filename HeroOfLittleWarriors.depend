@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1674574436 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1674581931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -1003,10 +1003,10 @@
 1674119929 source:c:\users\piotr\documents\github\herooflittlewarriors\background.cpp
 	"Background.hpp"
 
-1674206450 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
+1674580966 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
 	"Background.hpp"
 
-1674206450 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.hpp
+1674580952 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -1014,10 +1014,10 @@
 1673796630 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hitbox.hpp
 	<SFML/Graphics.hpp>
 
-1674492460 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
+1674582023 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
 	"Map.hpp"
 
-1674492460 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
+1674581931 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
 	<SFML/Graphics.hpp>
 	"Background.hpp"
 	<iostream>
@@ -1046,10 +1046,10 @@
 1674492459 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\camera.cpp
 	"Camera.hpp"
 
-1674496540 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.cpp
+1674579126 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.cpp
 	"Print.hpp"
 
-1674574703 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.hpp
+1674579126 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\print.hpp
 	<SFML/Graphics.hpp>
 	<vector>
 	<iostream>

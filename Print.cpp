@@ -5,14 +5,10 @@ void Print::addSprite(sf::Sprite sprite)
     spriteBuffer.push_back(sprite);
 }
 
-bool Print::operatorLess(const sf::Sprite & sprite, const sf::Sprite& sprite2)
+void Print::addSprite(std::vector <sf::Sprite> sprite)
 {
-    if(sprite.getGlobalBounds().top + sprite.getGlobalBounds().height < sprite2.getGlobalBounds().top + sprite2.getGlobalBounds().height)
-    {
-        std::cout << "porownuje" << std::endl;
-        return true;
-    }
-    return false;
+    for(int i = 0; i < sprite.size();i++)
+        spriteBuffer.push_back(sprite[i]);
 }
 
 void Print::sort()
@@ -28,7 +24,6 @@ void Print::sort()
            }
        }
 }
-
 
 void Print::draw(sf::RenderWindow * window)
 {

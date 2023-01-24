@@ -33,10 +33,6 @@ int main()
     map.setWindowSize(window.getSize());
     map.setPosition();
 
-    Background grass;
-    grass.loadBackground("art/Backgrounds/game_background_2/layers/front_decor.png");
-
-    grass.setWindowSize(window.getSize());
     BronzeSoldier bronzeSoldier;
     BlackKnight blackKnight;
     SilverKnight silverKnight;
@@ -78,6 +74,16 @@ int main()
                         window.close();
                         break;
                     }
+                    case sf::Keyboard::P:
+                        {
+                            cam.getView().zoom(2);
+                            break;
+                        }
+                    case sf::Keyboard::O:
+                        {
+                            cam.getView().zoom(0.5);
+                            break;
+                        }
                 }
             }
             else if(event.type == sf::Event::KeyReleased)
@@ -192,22 +198,20 @@ int main()
 
         window.clear(sf::Color::Black);
 
-        std::vector <sf::Sprite> sprite = map.getSprite();
-        for(int i = 0; i <= 3; i++)
-        {
-            window.draw(sprite[i]);
-        }
+        print.addSprite(map.getBackgroundSprite());
+        print.draw(&window);
 
         print.addSprite(bronzeSoldier.getSprite());
         print.addSprite(blackKnight.getSprite());
         print.addSprite(silverKnight.getSprite());
 
         print.sort();
-
-
         print.draw(&window);
-        window.draw(grass.getSprite());
 
+        print.addSprite(map.getGrassSprite());
+        print.draw(&window);
+        //print.addSprite(map.getGrassSprite());
+        //print.draw(&window);
 
 
 

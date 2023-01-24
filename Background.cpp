@@ -19,9 +19,4 @@ sf::Sprite & Background::getSprite()
    return sprite;
 }
 
-void Background::setWindowSize(sf::Vector2u size)
-{
-    sprite.setScale(size.x/sprite.getLocalBounds().width,size.y/sprite.getLocalBounds().height);
-
-}
 

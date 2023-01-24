@@ -14,6 +14,5 @@ public:
     Background();
     void loadBackground(std::string path);
     sf::Sprite & getSprite();
-    void setWindowSize(sf::Vector2u size);
 };
 #endif // BACKGROUND_HPP
