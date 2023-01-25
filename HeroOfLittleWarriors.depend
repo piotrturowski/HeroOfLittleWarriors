@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1674647734 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1674648838 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -13,7 +13,7 @@
 	"Camera.hpp"
 	"Print.hpp"
 	"Tower.hpp"
-	"highTower.hpp"
+	"MediumTower.hpp"
 
 1525808418 c:\users\ula\onedrive\dokumenty\projekty\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1075,5 +1075,8 @@
 	<SFML/Graphics.hpp>
 
 1674647321 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hightower.hpp
+	"GameObject.hpp"
+
+1674648838 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\mediumtower.hpp
 	"GameObject.hpp"
 
