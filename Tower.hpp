@@ -2,18 +2,16 @@
 #define TOWER_HPP
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "GameObject.hpp"
 
-class Tower
+
+class Tower : public GameObject
 {
-    sf::Texture texture;
-    sf::Sprite sprite;
+protected:
 
 public:
     Tower();
-    sf::Sprite & getSprite();
     void setPosition(sf::Vector2f pos);
-    void setScale(float windowHeight);
-    void loadFromFile(std::string path);
 
 };
 #endif // TOWER_HPP

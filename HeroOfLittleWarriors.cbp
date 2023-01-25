@@ -49,6 +49,8 @@
 		<Unit filename="Animation.hpp" />
 		<Unit filename="Background.cpp" />
 		<Unit filename="Background.hpp" />
+		<Unit filename="Base.cpp" />
+		<Unit filename="Base.hpp" />
 		<Unit filename="BlackKnight.cpp" />
 		<Unit filename="BlackKnight.hpp" />
 		<Unit filename="BronzeSoldier.cpp" />
@@ -63,8 +65,12 @@
 		<Unit filename="ManagerAnimation.hpp" />
 		<Unit filename="Map.cpp" />
 		<Unit filename="Map.hpp" />
+		<Unit filename="MediumTower.cpp" />
+		<Unit filename="MediumTower.hpp" />
 		<Unit filename="Print.cpp" />
 		<Unit filename="Print.hpp" />
+		<Unit filename="SmallTower.cpp" />
+		<Unit filename="SmallTower.hpp" />
 		<Unit filename="Soldier.cpp" />
 		<Unit filename="Soldier.hpp" />
 		<Unit filename="Sprite.cpp" />
@@ -73,8 +79,6 @@
 		<Unit filename="System.hpp" />
 		<Unit filename="Tower.cpp" />
 		<Unit filename="Tower.hpp" />
-		<Unit filename="highTower.cpp" />
-		<Unit filename="highTower.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="silverKnight.cpp" />
 		<Unit filename="silverKnight.hpp" />

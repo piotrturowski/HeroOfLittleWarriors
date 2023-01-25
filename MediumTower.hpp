@@ -1,8 +1,8 @@
 #ifndef MEDIUMTOWER_HPP
 #define MEDIUMTOWER_HPP
-#include "GameObject.hpp"
+#include "Tower.hpp"
 
-class MediumTower : public GameObject
+class MediumTower : public Tower
 {
 
 public:

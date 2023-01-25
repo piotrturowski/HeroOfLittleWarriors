@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1674648838 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1674650593 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -13,7 +13,9 @@
 	"Camera.hpp"
 	"Print.hpp"
 	"Tower.hpp"
+	"SmallTower.hpp"
 	"MediumTower.hpp"
+	"Base.hpp"
 
 1525808418 c:\users\ula\onedrive\dokumenty\projekty\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1056,12 +1058,13 @@
 	<vector>
 	<iostream>
 
-1674591633 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\tower.cpp
+1674650432 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\tower.cpp
 	"Tower.hpp"
 
-1674591121 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\tower.hpp
+1674649744 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\tower.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
+	"GameObject.hpp"
 
 1674647549 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hightower.cpp
 	"highTower.hpp"
@@ -1077,6 +1080,21 @@
 1674647321 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hightower.hpp
 	"GameObject.hpp"
 
-1674648838 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\mediumtower.hpp
-	"GameObject.hpp"
+1674649287 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\mediumtower.hpp
+	"Tower.hpp"
+
+1674648847 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\mediumtower.cpp
+	"MediumTower.hpp"
+
+1674649803 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\smalltower.hpp
+	"Tower.hpp"
+
+1674649803 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\smalltower.cpp
+	"SmallTower.hpp"
+
+1674650518 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\base.cpp
+	"Base.hpp"
+
+1674650107 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\base.hpp
+	"Tower.hpp"
 

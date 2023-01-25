@@ -11,7 +11,9 @@
 #include "Camera.hpp"
 #include "Print.hpp"
 #include "Tower.hpp"
+#include "SmallTower.hpp"
 #include "MediumTower.hpp"
+#include "Base.hpp"
 
 int main()
 {
@@ -30,21 +32,25 @@ int main()
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
-    Tower tower;
+    Base base;
+    SmallTower smallTower;
     MediumTower mediumTower;
+
+    base.setScale(window.getSize().y);
+    base.setPosition(sf::Vector2f(map.getRectOfBattleArea().left,map.getRectOfBattleArea().top));
+    base.getSprite().move(0,-20);
 
     mediumTower.setScale(window.getSize().y);
     mediumTower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/4,map.getRectOfBattleArea().top));
     mediumTower.getSprite().move(0,-20);
 
-    tower.loadFromFile("art/Tower/small Tower.png");
-    tower.setScale(window.getSize().y);
-    tower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/3,map.getRectOfBattleArea().top));
+    smallTower.setScale(window.getSize().y);
+    smallTower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/3,map.getRectOfBattleArea().top));
 
 
     silverKnight.getSprite().setPosition(600,100);
     blackKnight.getSprite().setPosition(500,0);
-    bronzeSoldier.getSprite().setPosition(sf::Vector2f(0,0));
+    bronzeSoldier.getSprite().setPosition(sf::Vector2f(100,0));
 
 
     sf::Clock clock;
@@ -200,7 +206,8 @@ int main()
 
         window.clear(sf::Color::Black);
 
-        print.addSprite(tower.getSprite());
+        print.addSprite(base.getSprite());
+        print.addSprite(smallTower.getSprite());
         print.addSprite(mediumTower.getSprite());
 
         print.addSprite(map.getBackgroundSprite());
