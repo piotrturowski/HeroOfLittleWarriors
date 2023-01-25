@@ -11,6 +11,7 @@
 #include "Camera.hpp"
 #include "Print.hpp"
 #include "Tower.hpp"
+#include "highTower.hpp"
 
 int main()
 {
@@ -30,13 +31,16 @@ int main()
     SilverKnight silverKnight;
 
     Tower tower;
-    Tower tower2;
+    HighTower highTower;
+
+    highTower.loadFromFile("art/Tower/Medium Tower.png");
+    highTower.setScale(window.getSize().y);
+    highTower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/4,map.getRectOfBattleArea().top));
+    highTower.getSprite().move(0,-20);
+
     tower.loadFromFile("art/Tower/small Tower.png");
-    tower2.loadFromFile("art/Tower/high Tower.png");
     tower.setScale(window.getSize().y);
-    tower2.setScale(window.getSize().y);
     tower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/3,map.getRectOfBattleArea().top));
-    tower2.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/4,map.getRectOfBattleArea().top));
 
 
     silverKnight.getSprite().setPosition(600,100);
@@ -196,10 +200,13 @@ int main()
 
 
         window.clear(sf::Color::Black);
-        print.addSprite(tower2.getSprite());
+
         print.addSprite(tower.getSprite());
+        print.addSprite(highTower.getSprite());
+
         print.addSprite(map.getBackgroundSprite());
         print.draw(&window);
+
 
         print.addSprite(bronzeSoldier.getSprite());
         print.addSprite(blackKnight.getSprite());

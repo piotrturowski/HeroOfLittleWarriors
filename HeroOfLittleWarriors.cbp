@@ -55,6 +55,8 @@
 		<Unit filename="BronzeSoldier.hpp" />
 		<Unit filename="Camera.cpp" />
 		<Unit filename="Camera.hpp" />
+		<Unit filename="GameObject.cpp" />
+		<Unit filename="GameObject.hpp" />
 		<Unit filename="Human.cpp" />
 		<Unit filename="Human.hpp" />
 		<Unit filename="ManagerAnimation.cpp" />

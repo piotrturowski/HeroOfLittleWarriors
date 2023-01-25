@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1674591633 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1674647734 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -13,6 +13,7 @@
 	"Camera.hpp"
 	"Print.hpp"
 	"Tower.hpp"
+	"highTower.hpp"
 
 1525808418 c:\users\ula\onedrive\dokumenty\projekty\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -480,7 +481,7 @@
 1674158317 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\silverknight.cpp
 	"silverKnight.hpp"
 
-1674158437 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.cpp
+1674591862 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.cpp
 	"Soldier.hpp"
 
 1673460931 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\sprite.cpp
@@ -1062,5 +1063,17 @@
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1674591741 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hightower.cpp
+1674647549 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hightower.cpp
+	"highTower.hpp"
+
+1674647513 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\gameobject.cpp
+	"GameObject.hpp"
+
+1674648364 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\gameobject.hpp
+	<iostream>
+	<string>
+	<SFML/Graphics.hpp>
+
+1674647321 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hightower.hpp
+	"GameObject.hpp"
 
