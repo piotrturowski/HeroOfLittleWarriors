@@ -7,6 +7,7 @@
 class Soldier
 {
 protected:
+    float speed;
     bool walking;
     bool attacking;
     bool hurting;
@@ -14,7 +15,6 @@ protected:
     Animation walkAnim;
     Animation attackAnim;
     Animation hurtAnim;
-    float speed;
     sf::Sprite sprite;
     void isWalking();
     void setup();

@@ -201,5 +201,4 @@ void Soldier::hitBoxUpdate()
     weponHitBox.move(hitBox.getOrigin().x*hitBox.getScale().x,0);
     weponHitBox.setScale(sprite.getScale());
     weponHitBox.setFillColor(sf::Color::Red);
-
 }

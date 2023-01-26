@@ -514,7 +514,7 @@
 	<vector>
 	<string>
 
-1674223174 source:c:\users\piotr\documents\github\herooflittlewarriors\blackknight.cpp
+1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\blackknight.cpp
 	"BlackKnight.hpp"
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\blackknight.hpp
@@ -522,12 +522,12 @@
 	"Animation.hpp"
 	"Soldier.hpp"
 
-1674140539 c:\users\piotr\documents\github\herooflittlewarriors\soldier.hpp
+1674757900 c:\users\piotr\documents\github\herooflittlewarriors\soldier.hpp
 	<SFML/Graphics.hpp>
 	<cmath>
 	"Animation.hpp"
 
-1674223174 source:c:\users\piotr\documents\github\herooflittlewarriors\bronzesoldier.cpp
+1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\bronzesoldier.cpp
 	"BronzeSoldier.hpp"
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\bronzesoldier.hpp
@@ -541,7 +541,7 @@
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\human.hpp
 
-1674237504 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
+1674765867 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -553,14 +553,19 @@
 	"Background.hpp"
 	"Map.hpp"
 	"Camera.hpp"
+	"Print.hpp"
+	"Tower.hpp"
+	"SmallTower.hpp"
+	"MediumTower.hpp"
+	"Base.hpp"
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\silverknight.hpp
 	"Soldier.hpp"
 
-1673807816 c:\users\piotr\documents\github\herooflittlewarriors\hitbox.hpp
+1674757900 c:\users\piotr\documents\github\herooflittlewarriors\hitbox.hpp
 	<SFML/Graphics.hpp>
 
-1674119929 c:\users\piotr\documents\github\herooflittlewarriors\background.hpp
+1674588269 c:\users\piotr\documents\github\herooflittlewarriors\background.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -575,10 +580,10 @@
 	<SFML/Graphics.hpp>
 	"Animation.hpp"
 
-1674223174 source:c:\users\piotr\documents\github\herooflittlewarriors\silverknight.cpp
+1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\silverknight.cpp
 	"silverKnight.hpp"
 
-1674223174 source:c:\users\piotr\documents\github\herooflittlewarriors\soldier.cpp
+1674765011 source:c:\users\piotr\documents\github\herooflittlewarriors\soldier.cpp
 	"Soldier.hpp"
 
 1673807816 source:c:\users\piotr\documents\github\herooflittlewarriors\sprite.cpp
@@ -1004,7 +1009,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1674119929 source:c:\users\piotr\documents\github\herooflittlewarriors\background.cpp
+1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\background.cpp
 	"Background.hpp"
 
 1674588669 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\background.cpp
@@ -1027,19 +1032,19 @@
 	<iostream>
 	<vector>
 
-1674233452 source:c:\users\piotr\documents\github\herooflittlewarriors\map.cpp
+1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\map.cpp
 	"Map.hpp"
 
-1674232862 c:\users\piotr\documents\github\herooflittlewarriors\map.hpp
+1674588269 c:\users\piotr\documents\github\herooflittlewarriors\map.hpp
 	<SFML/Graphics.hpp>
 	"Background.hpp"
 	<iostream>
 	<vector>
 
-1674252181 source:c:\users\piotr\documents\github\herooflittlewarriors\camera.cpp
+1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\camera.cpp
 	"Camera.hpp"
 
-1674237441 c:\users\piotr\documents\github\herooflittlewarriors\camera.hpp
+1674588269 c:\users\piotr\documents\github\herooflittlewarriors\camera.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 
@@ -1096,5 +1101,47 @@
 	"Base.hpp"
 
 1674650107 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\base.hpp
+	"Tower.hpp"
+
+1674660610 source:c:\users\piotr\documents\github\herooflittlewarriors\base.cpp
+	"Base.hpp"
+
+1674660610 c:\users\piotr\documents\github\herooflittlewarriors\base.hpp
+	"Tower.hpp"
+
+1674765454 c:\users\piotr\documents\github\herooflittlewarriors\tower.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"GameObject.hpp"
+
+1674660610 c:\users\piotr\documents\github\herooflittlewarriors\gameobject.hpp
+	<iostream>
+	<string>
+	<SFML/Graphics.hpp>
+
+1674660610 source:c:\users\piotr\documents\github\herooflittlewarriors\gameobject.cpp
+	"GameObject.hpp"
+
+1674588269 c:\users\piotr\documents\github\herooflittlewarriors\print.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+	<iostream>
+
+1674660610 c:\users\piotr\documents\github\herooflittlewarriors\smalltower.hpp
+	"Tower.hpp"
+
+1674660610 c:\users\piotr\documents\github\herooflittlewarriors\mediumtower.hpp
+	"Tower.hpp"
+
+1674660610 source:c:\users\piotr\documents\github\herooflittlewarriors\mediumtower.cpp
+	"MediumTower.hpp"
+
+1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\print.cpp
+	"Print.hpp"
+
+1674765338 source:c:\users\piotr\documents\github\herooflittlewarriors\smalltower.cpp
+	"SmallTower.hpp"
+
+1674765959 source:c:\users\piotr\documents\github\herooflittlewarriors\tower.cpp
 	"Tower.hpp"
 

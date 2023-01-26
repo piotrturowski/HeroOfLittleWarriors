@@ -5,14 +5,10 @@
 class HitBox
 {
 private:
-    sf::FloatRect rect;
-
+    sf::RectangleShape hitBox;
+    void hitBoxUpdate();
 public:
     HitBox();
-    setPosition();
-    getPosition();
-
-    sf::FloatRect getRect();
 
 };
 

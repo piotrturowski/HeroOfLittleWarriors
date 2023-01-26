@@ -50,7 +50,7 @@ int main()
 
     silverKnight.getSprite().setPosition(600,100);
     blackKnight.getSprite().setPosition(500,0);
-    bronzeSoldier.getSprite().setPosition(sf::Vector2f(100,0));
+    bronzeSoldier.getSprite().setPosition(sf::Vector2f(1500,0));
 
 
     sf::Clock clock;
@@ -203,6 +203,10 @@ int main()
         cam.update(bronzeSoldier.getSprite().getPosition(), map.getRectOfBattleArea());
         window.setView(cam.getView());
 
+        if(smallTower.onCollision(bronzeSoldier.getWeponHitBox()))
+        {
+
+        }
 
         window.clear(sf::Color::Black);
 
@@ -220,7 +224,7 @@ int main()
 
         print.sort();
         print.draw(&window);
-
+        window.draw(smallTower.hitBox);
         print.addSprite(map.getGrassSprite());
         print.draw(&window);
 

@@ -11,7 +11,10 @@ protected:
 
 public:
     Tower();
+    void setHitBox();
     void setPosition(sf::Vector2f pos);
+    bool onCollision(sf::FloatRect enemyHitBox);
+        sf::RectangleShape hitBox;
 
 };
 #endif // TOWER_HPP
