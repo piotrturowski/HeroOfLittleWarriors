@@ -36,17 +36,17 @@ int main()
     SmallTower smallTower;
     MediumTower mediumTower;
 
+    base.setPosition(sf::Vector2f(map.getRectOfBattleArea().left,map.getRectOfBattleArea().top/2));
     base.setScale(window.getSize().y);
-    base.setPosition(sf::Vector2f(map.getRectOfBattleArea().left,map.getRectOfBattleArea().top));
-    base.getSprite().move(0,-20);
 
-    mediumTower.setScale(window.getSize().y);
+
     mediumTower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/4,map.getRectOfBattleArea().top));
-    mediumTower.getSprite().move(0,-20);
+    mediumTower.setScale(window.getSize().y);
 
-    smallTower.setScale(window.getSize().y);
+
     smallTower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/3,map.getRectOfBattleArea().top));
-
+    smallTower.setScale(window.getSize().y);
+    //smallTower.setHitBox();
 
     silverKnight.getSprite().setPosition(600,100);
     blackKnight.getSprite().setPosition(500,0);
@@ -217,6 +217,7 @@ int main()
         print.addSprite(map.getBackgroundSprite());
         print.draw(&window);
 
+        window.draw(smallTower.hitBox);
 
         print.addSprite(bronzeSoldier.getSprite());
         print.addSprite(blackKnight.getSprite());
@@ -224,7 +225,11 @@ int main()
 
         print.sort();
         print.draw(&window);
-        window.draw(smallTower.hitBox);
+
+
+        //window.draw(mediumTower.hitBox);
+        //window.draw(base.hitBox);
+
         print.addSprite(map.getGrassSprite());
         print.draw(&window);
 

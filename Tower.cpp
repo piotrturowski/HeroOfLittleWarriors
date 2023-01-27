@@ -7,16 +7,17 @@ Tower::Tower()
 
 void Tower::setPosition(sf::Vector2f pos)
 {
-    sprite.setPosition(pos.x+sprite.getOrigin().x,pos.y);
-    hitBox.setPosition(pos.x+sprite.getOrigin().x,pos.y);
+    sprite.setPosition(pos);
+    hitBox.setPosition(pos);
 }
 
 void Tower::setHitBox()
 {
-    hitBox.setOrigin(sprite.getOrigin());
     hitBox.setSize(sf::Vector2f(sprite.getGlobalBounds().width,sprite.getGlobalBounds().height));
+    hitBox.Transformable(sprite.getTransform());
+    setOrigin();
     hitBox.setPosition(sprite.getPosition());
-    std::cout << sprite.getPosition().x;
+    //std::cout << sprite.getOrigin().y << std::endl;
 
 }
 
@@ -36,3 +37,9 @@ bool Tower::onCollision(sf::FloatRect enemyHitBox)
     }
 }
 
+
+void Tower::setOrigin()
+{
+    sprite.setOrigin(sprite.getLocalBounds().width/2,sprite.getLocalBounds().height/2);
+    hitBox.setOrigin(hitBox.getLocalBounds().width/2,hitBox.getLocalBounds().height/2);
+}

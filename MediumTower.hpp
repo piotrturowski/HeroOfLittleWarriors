@@ -8,7 +8,6 @@ class MediumTower : public Tower
 public:
     MediumTower();
     void setScale(float windowHeight);
-    void setPosition(sf::Vector2f pos);
 };
 
 #endif // MEDIUMTOWER_HPP

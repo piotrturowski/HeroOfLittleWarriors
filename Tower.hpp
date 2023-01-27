@@ -14,7 +14,7 @@ public:
     void setHitBox();
     void setPosition(sf::Vector2f pos);
     bool onCollision(sf::FloatRect enemyHitBox);
-        sf::RectangleShape hitBox;
-
+    sf::RectangleShape hitBox;
+    void setOrigin();
 };
 #endif // TOWER_HPP
