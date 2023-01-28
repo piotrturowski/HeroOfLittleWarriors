@@ -61,12 +61,16 @@
 		<Unit filename="GameObject.hpp" />
 		<Unit filename="Human.cpp" />
 		<Unit filename="Human.hpp" />
+		<Unit filename="MagicBall.cpp" />
+		<Unit filename="MagicBall.hpp" />
 		<Unit filename="ManagerAnimation.cpp" />
 		<Unit filename="ManagerAnimation.hpp" />
 		<Unit filename="Map.cpp" />
 		<Unit filename="Map.hpp" />
 		<Unit filename="MediumTower.cpp" />
 		<Unit filename="MediumTower.hpp" />
+		<Unit filename="Phisics.cpp" />
+		<Unit filename="Phisics.hpp" />
 		<Unit filename="Print.cpp" />
 		<Unit filename="Print.hpp" />
 		<Unit filename="SmallTower.cpp" />

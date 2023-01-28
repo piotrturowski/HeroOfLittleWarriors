@@ -14,6 +14,7 @@
 #include "SmallTower.hpp"
 #include "MediumTower.hpp"
 #include "Base.hpp"
+#include "MagicBall.hpp"
 
 int main()
 {
@@ -36,7 +37,10 @@ int main()
     SmallTower smallTower;
     MediumTower mediumTower;
 
-    base.setPosition(sf::Vector2f(map.getRectOfBattleArea().left,map.getRectOfBattleArea().top/2));
+    MagicBall s;
+
+
+    base.setPosition(sf::Vector2f(map.getRectOfBattleArea().left+base.getSprite().getGlobalBounds().height/8,map.getRectOfBattleArea().top+map.getRectOfBattleArea().height/2));
     base.setScale(window.getSize().y);
 
 
@@ -207,6 +211,7 @@ int main()
         {
 
         }
+        smallTower.enemyIsUderTower(bronzeSoldier.getSprite().getPosition());
 
         window.clear(sf::Color::Black);
 
@@ -217,18 +222,13 @@ int main()
         print.addSprite(map.getBackgroundSprite());
         print.draw(&window);
 
-        window.draw(smallTower.hitBox);
-
         print.addSprite(bronzeSoldier.getSprite());
         print.addSprite(blackKnight.getSprite());
         print.addSprite(silverKnight.getSprite());
+        print.addSprite(smallTower.getMagicBallSprite());
 
         print.sort();
         print.draw(&window);
-
-
-        //window.draw(mediumTower.hitBox);
-        //window.draw(base.hitBox);
 
         print.addSprite(map.getGrassSprite());
         print.draw(&window);
