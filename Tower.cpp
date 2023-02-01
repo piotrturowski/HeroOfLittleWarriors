@@ -50,21 +50,22 @@ void Tower::enemyIsUderTower(sf::Vector2f heroPos)
     float distance = phisics::distanceBetweenTwoPoints(heroPos,sprite.getPosition());
     if( distance < range)
     {
-        spawnMagicBall();
+        if(magicBall.size()< 2)
+            spawnMagicBall();
     }
 }
 
 void Tower::spawnMagicBall()
 {
     magicBall.push_back(MagicBall());
+    magicBall[0].loadFromFile("art/Magic balls/Magic ball_1.png");
     magicBall[0].getSprite().setPosition(sprite.getPosition());
+    returnedSprite.push_back(magicBall[0].getSprite());
 }
 
-sf::Sprite & Tower::getMagicBallSprite()
+std::vector <sf::Sprite> Tower::getMagicBallSprite()
 {
-    if(magicBall.size() > 0)
-        return magicBall[0].getSprite();
-
+    return returnedSprite;
 }
 
 

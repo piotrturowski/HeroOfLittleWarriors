@@ -214,6 +214,7 @@ int main()
         smallTower.enemyIsUderTower(bronzeSoldier.getSprite().getPosition());
 
         window.clear(sf::Color::Black);
+        std::vector <sf::Sprite> sprite;
 
         print.addSprite(base.getSprite());
         print.addSprite(smallTower.getSprite());
@@ -225,6 +226,11 @@ int main()
         print.addSprite(bronzeSoldier.getSprite());
         print.addSprite(blackKnight.getSprite());
         print.addSprite(silverKnight.getSprite());
+
+        //for(int i = 0; i<smallTower.magicBall.size();i++)
+        //{
+         //   print.addSprite(smallTower.magicBall[i].getSprite());
+        //}
         print.addSprite(smallTower.getMagicBallSprite());
 
         print.sort();
