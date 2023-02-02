@@ -96,6 +96,17 @@ int main()
                             cam.getView().zoom(0.5);
                             break;
                         }
+                    case sf::Keyboard::M:
+                    {
+                        for(int i = 0 ; i<smallTower.magicBall.size(); i++)
+                        {
+                            std::cout << "numer=" << i << std::endl;
+                            std::cout << "wysokoœæ="<<smallTower.magicBall[i].getSprite().getPosition().y << std::endl << std::endl;
+                            smallTower.magicBall[i].loadFromFile("art/Magic balls/Magic ball_1.png");
+                        }
+
+                        break;
+                    }
                 }
             }
             else if(event.type == sf::Event::KeyReleased)
@@ -227,11 +238,13 @@ int main()
         print.addSprite(blackKnight.getSprite());
         print.addSprite(silverKnight.getSprite());
 
-        //for(int i = 0; i<smallTower.magicBall.size();i++)
-        //{
-         //   print.addSprite(smallTower.magicBall[i].getSprite());
-        //}
-        print.addSprite(smallTower.getMagicBallSprite());
+        for(int i = 0; i<smallTower.magicBall.size();i++)
+        {
+            print.addSprite(smallTower.magicBall[i].getSprite());
+        }
+
+        //std::cout << smallTower.magicBall.size() << std::endl;
+        //print.addSprite(smallTower.getMagicBallSprite());
 
         print.sort();
         print.draw(&window);

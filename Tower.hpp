@@ -12,8 +12,7 @@
 class Tower : public GameObject
 {
 protected:
-    std::vector <MagicBall> magicBall;
-    std::vector <sf::Sprite> returnedSprite;
+
     float range;
     void spawnMagicBall();
 public:
@@ -25,6 +24,8 @@ public:
     void setOrigin();
     void enemyIsUderTower(sf::Vector2f heroPos);
     std::vector <sf::Sprite> getMagicBallSprite();
+    std::vector <MagicBall> magicBall;
+    std::vector <sf::Sprite> returnedSprite;
 
 };
 #endif // TOWER_HPP
