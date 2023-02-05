@@ -3,7 +3,7 @@
 
 Tower::Tower()
 {
-    range = 10000;
+    range = 200;
 }
 
 void Tower::setPosition(sf::Vector2f pos)
@@ -18,8 +18,6 @@ void Tower::setHitBox()
     hitBox.setSize(sf::Vector2f(sprite.getGlobalBounds().width,sprite.getGlobalBounds().height));
     setOrigin();
     hitBox.setPosition(sprite.getPosition());
-    //std::cout << sprite.getOrigin().y << std::endl;
-
 }
 
 bool Tower::onCollision(sf::FloatRect enemyHitBox)
@@ -52,22 +50,31 @@ void Tower::enemyIsUderTower(sf::Vector2f heroPos)
     {
         if(magicBall.size()< 3)
             spawnMagicBall();
+
+
     }
+    std::cout << distance <<std::endl;
 }
 
 void Tower::spawnMagicBall()
 {
     magicBall.push_back(MagicBall());
+    for(int i = 0; i<magicBall.size();i++)
+    {
+        magicBall[i].loadFromFile("art/Magic balls/Magic ball_1.png");
+        magicBall[magicBall.size()-1].getSprite().setPosition(sprite.getPosition().x,sprite.getPosition().y+magicBall.size()*100);
+    }
 
-
-    magicBall[magicBall.size()-1].getSprite().setPosition(sprite.getPosition().x,sprite.getPosition().y+magicBall.size()*100);
-
-    returnedSprite.push_back(magicBall[magicBall.size()-1].getSprite());
 }
 
 std::vector <sf::Sprite> Tower::getMagicBallSprite()
 {
-    return returnedSprite;
+    std::vector <sf::Sprite> rs;
+    for(int i = 0 ; i < magicBall.size(); i++)
+    {
+        rs.push_back(magicBall[i].getSprite());
+    }
+    return rs;
 }
 
 

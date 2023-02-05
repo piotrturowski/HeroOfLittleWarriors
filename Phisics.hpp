@@ -2,6 +2,7 @@
 #define PHISICS_HPP
 #include <SFML/Graphics.hpp>
 #include <math.h>
+#include <cmath>
 
 namespace phisics
 {
