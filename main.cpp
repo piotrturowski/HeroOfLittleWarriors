@@ -207,6 +207,7 @@ int main()
         silverKnight.update(time);
         bronzeSoldier.update(time);
         blackKnight.update(time);
+        smallTower.update(time);
         clock.restart();
 
         cam.update(bronzeSoldier.getSprite().getPosition(), map.getRectOfBattleArea());

@@ -12,9 +12,14 @@
 class Tower : public GameObject
 {
 protected:
+    MagicBall magicBallOriginal;
     std::vector <MagicBall> magicBall;
     float range;
     void spawnMagicBall();
+    sf::Time spawnBallTime;
+    sf::Time totalTime;
+    bool spawnCooldown;
+    void checkCooldownIsDown(sf::Time deltaTime);
 public:
     Tower();
     void setHitBox();
@@ -24,6 +29,8 @@ public:
     void setOrigin();
     void enemyIsUderTower(sf::Vector2f heroPos);
     std::vector <sf::Sprite> getMagicBallSprite();
+    void update(sf::Time deltaTime);
+
 
 
 };
