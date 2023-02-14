@@ -27,7 +27,7 @@ public:
     bool onCollision(sf::FloatRect enemyHitBox);
     sf::RectangleShape hitBox;
     void setOrigin();
-    void enemyIsUderTower(sf::Vector2f heroPos);
+    void enemyIsUderTower(const sf::Vector2f *heroPos);
     std::vector <sf::Sprite> getMagicBallSprite();
     void update(sf::Time deltaTime);
 

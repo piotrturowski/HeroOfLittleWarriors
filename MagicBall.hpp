@@ -13,6 +13,9 @@ public:
     void update(sf::Time dletaTime);
     void rotate();
     void setSwitchTime(float speed);
+    void setVectorTracking(const sf::Vector2f * trackingVector );
+    const sf::Vector2f * trackingVector;
+
 };
 
 #endif // MAGICBALL_HPP
