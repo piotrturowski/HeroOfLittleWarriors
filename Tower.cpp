@@ -91,7 +91,6 @@ void Tower::update(sf::Time deltaTime)
     for(int i = 0 ; i < magicBall.size(); i++)
     {
         magicBall[i].update(deltaTime);
-        std::cout << magicBall[i].trackingVector->x << std::endl;
     }
     checkCooldownIsDown(deltaTime);
 }

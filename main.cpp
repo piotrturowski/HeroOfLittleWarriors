@@ -217,7 +217,7 @@ int main()
         {
 
         }
-        smallTower.enemyIsUderTower(bronzeSoldier.getSprite().getPosition());
+        smallTower.enemyIsUderTower(&bronzeSoldier.getSprite().getPosition());
 
         window.clear(sf::Color::Black);
         std::vector <sf::Sprite> sprite;
