@@ -49,15 +49,17 @@ void Tower::setOrigin()
     hitBox.setOrigin(hitBox.getLocalBounds().width/2,hitBox.getLocalBounds().height/2);
 }
 
-void Tower::enemyIsUderTower(sf::Vector2f heroPos)
+void Tower::enemyIsUderTower(const sf::Vector2f *heroPos)
 {
-    float distance = phisics::distanceBetweenTwoPoints(heroPos,sprite.getPosition());
+    float distance = phisics::distanceBetweenTwoPoints(*heroPos,sprite.getPosition());
     if( distance < range)
     {
         if(magicBall.size() < 3 && spawnCooldown)
         {
 
             spawnMagicBall();
+            magicBall.back().setVectorTracking(heroPos);
+
         }
 
     }
@@ -67,12 +69,6 @@ void Tower::spawnMagicBall()
 {
     magicBall.push_back(magicBallOriginal);
     magicBall.back().getSprite().setPosition(sprite.getPosition().x,sprite.getPosition().y+magicBall.size()*100);
-
-    std::cout <<"original x = " << magicBallOriginal.getSprite().getOrigin().x <<std::endl;
-    std::cout <<"original y = " << magicBallOriginal.getSprite().getOrigin().y <<std::endl;
-
-    std::cout <<magicBall.size()<<" magicball x = " << magicBall[0].getSprite().getOrigin().x <<std::endl;
-    std::cout <<magicBall.size()<<" magicball y = " << magicBall[0].getSprite().getOrigin().y <<std::endl;
 
 
     spawnCooldown = false;
