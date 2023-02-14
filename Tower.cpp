@@ -8,7 +8,8 @@ Tower::Tower()
     totalTime = sf::seconds(0);
     spawnCooldown = true;
     magicBallOriginal.loadFromFile("art/Magic balls/Magic ball_1.png");
-    magicBallOriginal.getSprite().setOrigin(magicBallOriginal.getSprite().getGlobalBounds().width/2,magicBallOriginal.getSprite().getGlobalBounds().height/2);
+    magicBallOriginal.getSprite().setOrigin(magicBallOriginal.getSprite().getLocalBounds().width/2,magicBallOriginal.getSprite().getLocalBounds().height/2);
+
 }
 
 void Tower::setPosition(sf::Vector2f pos)
@@ -66,12 +67,12 @@ void Tower::spawnMagicBall()
 {
     magicBall.push_back(magicBallOriginal);
     magicBall.back().getSprite().setPosition(sprite.getPosition().x,sprite.getPosition().y+magicBall.size()*100);
-    magicBall.back().getSprite().setOrigin(magicBallOriginal.getSprite().getOrigin());
+
     std::cout <<"original x = " << magicBallOriginal.getSprite().getOrigin().x <<std::endl;
     std::cout <<"original y = " << magicBallOriginal.getSprite().getOrigin().y <<std::endl;
 
-    std::cout <<magicBall.size()<<" magicball x = " << magicBallOriginal.getSprite().getOrigin().x <<std::endl;
-    std::cout <<magicBall.size()<<" magicball x = " << magicBallOriginal.getSprite().getOrigin().y <<std::endl;
+    std::cout <<magicBall.size()<<" magicball x = " << magicBall[0].getSprite().getOrigin().x <<std::endl;
+    std::cout <<magicBall.size()<<" magicball y = " << magicBall[0].getSprite().getOrigin().y <<std::endl;
 
 
     spawnCooldown = false;
@@ -80,13 +81,13 @@ void Tower::spawnMagicBall()
 
 std::vector <sf::Sprite> Tower::getMagicBallSprite()
 {
-    std::vector <sf::Sprite> rs;
+    std::vector <sf::Sprite> returnedSprite;
     for(int i = 0 ; i < magicBall.size(); i++)
     {
-        rs.push_back(magicBall[i].getSprite());
-        std::cout << rs[0].getOrigin().y <<std::endl;
+        returnedSprite.push_back(magicBall[i].getSprite());
+       //std::cout << returnedSprite[0].getOrigin().y <<std::endl;
     }
-    return rs;
+    return returnedSprite;
 }
 
 void Tower::update(sf::Time deltaTime)

@@ -143,9 +143,9 @@ void Soldier::setup()
 
 void Soldier::setCenter()
 {
-    sprite.setOrigin(sprite.getGlobalBounds().width,sprite.getGlobalBounds().height);
-    hitBox.setOrigin(hitBox.getGlobalBounds().width,sprite.getGlobalBounds().height);
-    weponHitBox.setOrigin(weponHitBox.getGlobalBounds().width,weponHitBox.getGlobalBounds().height);
+    sprite.setOrigin(sprite.getLocalBounds().width/2,sprite.getLocalBounds().height/2);
+    hitBox.setOrigin(hitBox.getLocalBounds().width/2,sprite.getLocalBounds().height/2);
+    weponHitBox.setOrigin(weponHitBox.getLocalBounds().width/2,weponHitBox.getLocalBounds().height/2);
 }
 
 void Soldier::isHurting()
