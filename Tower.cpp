@@ -42,6 +42,21 @@ bool Tower::onCollision(sf::FloatRect enemyHitBox)
     }
 }
 
+bool Tower::magicBallOnCollision(sf::FloatRect enemyHitBox)
+{
+    for(int i = 0 ; i < magicBall.size();i++)
+    {
+        if(magicBall[i].onCollision(enemyHitBox))
+        {
+            magicBall.erase(magicBall.begin()+i);
+            std::cout << i << std::endl;
+            return true;
+        }
+        return false;
+    }
+
+}
+
 
 void Tower::setOrigin()
 {
@@ -106,5 +121,7 @@ void Tower::checkCooldownIsDown(sf::Time deltaTime)
 
     }
 }
+
+
 
 

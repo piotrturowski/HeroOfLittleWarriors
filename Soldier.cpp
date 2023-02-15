@@ -166,20 +166,29 @@ sf::FloatRect Soldier::getWeponHitBox()
     return sf::FloatRect(0,0,0,0);
 }
 
-void Soldier::onCollision(sf::FloatRect enemyHitBox)
+bool Soldier::onCollision(sf::FloatRect enemyHitBox)
 {
     if(hitBox.getGlobalBounds().intersects(enemyHitBox))
     {
          isHurting();
          //std::cout << "is Collsion" << std::endl;
+
+        return true;
     }
     else
     {
         //std::cout << "not is Collsion" << std::endl;
 
+        return false;
 
     }
 }
+
+sf::FloatRect Soldier::getHitBox()
+{
+    return hitBox.getGlobalBounds();
+}
+
 
 void Soldier::setScale(sf::Vector2u size)
 {
@@ -202,3 +211,5 @@ void Soldier::hitBoxUpdate()
     weponHitBox.setScale(sprite.getScale());
     weponHitBox.setFillColor(sf::Color::Red);
 }
+
+

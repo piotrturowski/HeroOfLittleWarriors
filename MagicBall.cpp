@@ -24,9 +24,9 @@ void MagicBall::update(sf::Time deltaTime)
 
 void MagicBall::moveToTarget()
 {
-    if(phisics::distanceBetweenTwoPoints(*trackingVector,sprite.getPosition())< 50)
+    if(getDistanceToTarget() < 50)
     {
-        std::cout << "in target" << std::endl;
+        //std::cout << "in target" << std::endl;
 
     }
     else
@@ -69,4 +69,18 @@ void MagicBall::setVectorTracking(const sf::Vector2f * trackingVector )
     this->trackingVector = trackingVector;
 }
 
+float MagicBall::getDistanceToTarget()
+{
+    return phisics::distanceBetweenTwoPoints(*trackingVector,sprite.getPosition());
+}
+
+bool MagicBall::onCollision(sf::FloatRect enemyHitBox)
+{
+    if(sprite.getGlobalBounds().intersects(enemyHitBox))
+    {
+         //std::cout << "is Collsion" << std::endl;
+         return true;
+    }
+        return false;
+}
 

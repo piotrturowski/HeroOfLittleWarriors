@@ -18,6 +18,8 @@ public:
     void moveToTarget();
     void setSwitchTime(float speed);
     void setVectorTracking(const sf::Vector2f * trackingVector );
+    float getDistanceToTarget();
+    bool onCollision(sf::FloatRect enemyHitBox);
 
 };
 
