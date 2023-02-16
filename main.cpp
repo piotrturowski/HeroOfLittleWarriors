@@ -217,10 +217,13 @@ int main()
         {
 
         }
+        if(smallTower.magicBallOnCollision(bronzeSoldier.getHitBox()))
+        {
+
+        }
         smallTower.enemyIsUderTower(&bronzeSoldier.getSprite().getPosition());
 
         window.clear(sf::Color::Black);
-        std::vector <sf::Sprite> sprite;
 
         print.addSprite(base.getSprite());
         print.addSprite(smallTower.getSprite());

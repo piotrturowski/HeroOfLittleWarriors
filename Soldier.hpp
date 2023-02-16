@@ -39,8 +39,9 @@ public:
     void attack();
     void isHurting();
     void stopHurting();
-    void onCollision(sf::FloatRect enemyHitBox);
+    bool onCollision(sf::FloatRect enemyHitBox);
     sf::FloatRect getWeponHitBox();
+    sf::FloatRect getHitBox();
 
 
 

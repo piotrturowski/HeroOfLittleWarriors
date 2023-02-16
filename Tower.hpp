@@ -30,6 +30,8 @@ public:
     void enemyIsUderTower(const sf::Vector2f *heroPos);
     std::vector <sf::Sprite> getMagicBallSprite();
     void update(sf::Time deltaTime);
+    bool magicBallOnCollision(sf::FloatRect enemyHitBox);
+
 
 
 
