@@ -4,6 +4,7 @@
 Tower::Tower()
 {
     range = 200;
+    maxNumberOfMagicBalls = 3;
     spawnBallTime = sf::seconds(0);
     totalTime = sf::seconds(0);
     spawnCooldown = true;
@@ -69,7 +70,7 @@ void Tower::enemyIsUderTower(const sf::Vector2f *heroPos)
     float distance = phisics::distanceBetweenTwoPoints(*heroPos,sprite.getPosition());
     if( distance < range)
     {
-        if(magicBall.size() < 3 && spawnCooldown)
+        if(magicBall.size() < maxNumberOfMagicBalls && spawnCooldown)
         {
 
             spawnMagicBall();
@@ -120,6 +121,11 @@ void Tower::checkCooldownIsDown(sf::Time deltaTime)
         spawnCooldown = true;
 
     }
+}
+
+void Tower::getDamage()
+{
+
 }
 
 

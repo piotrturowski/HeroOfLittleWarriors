@@ -7,14 +7,17 @@
 #include "GameObject.hpp"
 #include "MagicBall.hpp"
 #include "Phisics.hpp"
+#include "Base.hpp"
 
 
 class Tower : public GameObject
 {
 protected:
+
     MagicBall magicBallOriginal;
     std::vector <MagicBall> magicBall;
     float range;
+    unsigned short maxNumberOfMagicBalls;
     void spawnMagicBall();
     sf::Time spawnBallTime;
     sf::Time totalTime;
@@ -31,7 +34,7 @@ public:
     std::vector <sf::Sprite> getMagicBallSprite();
     void update(sf::Time deltaTime);
     bool magicBallOnCollision(sf::FloatRect enemyHitBox);
-
+    void getDamage();
 
 
 

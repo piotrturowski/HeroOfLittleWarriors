@@ -212,4 +212,9 @@ void Soldier::hitBoxUpdate()
     weponHitBox.setFillColor(sf::Color::Red);
 }
 
+void Soldier::getDamage()
+{
+
+}
+
 

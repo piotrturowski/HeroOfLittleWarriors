@@ -522,7 +522,7 @@
 	"Animation.hpp"
 	"Soldier.hpp"
 
-1674757900 c:\users\piotr\documents\github\herooflittlewarriors\soldier.hpp
+1676632406 c:\users\piotr\documents\github\herooflittlewarriors\soldier.hpp
 	<SFML/Graphics.hpp>
 	<cmath>
 	"Animation.hpp"
@@ -541,7 +541,7 @@
 
 1673807816 c:\users\piotr\documents\github\herooflittlewarriors\human.hpp
 
-1675966427 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
+1676632406 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -584,7 +584,7 @@
 1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\silverknight.cpp
 	"silverKnight.hpp"
 
-1676372034 source:c:\users\piotr\documents\github\herooflittlewarriors\soldier.cpp
+1676632435 source:c:\users\piotr\documents\github\herooflittlewarriors\soldier.cpp
 	"Soldier.hpp"
 
 1673807816 source:c:\users\piotr\documents\github\herooflittlewarriors\sprite.cpp
@@ -1036,11 +1036,12 @@
 1674941644 source:c:\users\piotr\documents\github\herooflittlewarriors\map.cpp
 	"Map.hpp"
 
-1674588269 c:\users\piotr\documents\github\herooflittlewarriors\map.hpp
+1676633029 c:\users\piotr\documents\github\herooflittlewarriors\map.hpp
 	<SFML/Graphics.hpp>
 	"Background.hpp"
 	<iostream>
 	<vector>
+	"Base.hpp"
 
 1674588269 source:c:\users\piotr\documents\github\herooflittlewarriors\camera.cpp
 	"Camera.hpp"
@@ -1110,7 +1111,7 @@
 1674660610 c:\users\piotr\documents\github\herooflittlewarriors\base.hpp
 	"Tower.hpp"
 
-1675966427 c:\users\piotr\documents\github\herooflittlewarriors\tower.hpp
+1676632998 c:\users\piotr\documents\github\herooflittlewarriors\tower.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<cmath>
@@ -1118,6 +1119,7 @@
 	"GameObject.hpp"
 	"MagicBall.hpp"
 	"Phisics.hpp"
+	"Base.hpp"
 
 1674660610 c:\users\piotr\documents\github\herooflittlewarriors\gameobject.hpp
 	<iostream>
@@ -1147,14 +1149,15 @@
 1674844286 source:c:\users\piotr\documents\github\herooflittlewarriors\smalltower.cpp
 	"SmallTower.hpp"
 
-1676370594 source:c:\users\piotr\documents\github\herooflittlewarriors\tower.cpp
+1676632802 source:c:\users\piotr\documents\github\herooflittlewarriors\tower.cpp
 	"Tower.hpp"
 
-1674915840 c:\users\piotr\documents\github\herooflittlewarriors\magicball.hpp
+1676537061 c:\users\piotr\documents\github\herooflittlewarriors\magicball.hpp
 	"MagicBall.hpp"
 	"GameObject.hpp"
+	"Phisics.hpp"
 
-1676370778 source:c:\users\piotr\documents\github\herooflittlewarriors\magicball.cpp
+1676537061 source:c:\users\piotr\documents\github\herooflittlewarriors\magicball.cpp
 	"MagicBall.hpp"
 
 1675513969 c:\users\piotr\documents\github\herooflittlewarriors\phisics.hpp

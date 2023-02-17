@@ -33,7 +33,7 @@ int main()
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
-    Base base;
+
     SmallTower smallTower;
     MediumTower mediumTower;
 
@@ -215,12 +215,13 @@ int main()
 
         if(smallTower.onCollision(bronzeSoldier.getWeponHitBox()))
         {
-
+            bronzeSoldier.getDamage();
         }
         if(smallTower.magicBallOnCollision(bronzeSoldier.getHitBox()))
         {
-
+            bronzeSoldier.getDamage();
         }
+
         smallTower.enemyIsUderTower(&bronzeSoldier.getSprite().getPosition());
 
         window.clear(sf::Color::Black);

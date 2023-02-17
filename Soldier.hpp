@@ -42,7 +42,7 @@ public:
     bool onCollision(sf::FloatRect enemyHitBox);
     sf::FloatRect getWeponHitBox();
     sf::FloatRect getHitBox();
-
+    void getDamage();
 
 
 };

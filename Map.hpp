@@ -4,10 +4,12 @@
 #include "Background.hpp"
 #include <iostream>
 #include <vector>
+#include "Base.hpp"
 
 class Map
 {
 protected:
+    Base base;
     Background background[4];
     Background grass[4];
     sf::RectangleShape battleArea;
