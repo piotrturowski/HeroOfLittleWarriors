@@ -7,7 +7,6 @@
 #include "GameObject.hpp"
 #include "MagicBall.hpp"
 #include "Phisics.hpp"
-#include "Base.hpp"
 
 
 class Tower : public GameObject

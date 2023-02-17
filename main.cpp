@@ -33,7 +33,7 @@ int main()
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
-
+    Base base;
     SmallTower smallTower;
     MediumTower mediumTower;
 
