@@ -14,6 +14,16 @@ Map::Map()
 
 }
 
+void Map::setup()
+{
+    base.setPosition(sf::Vector2f(getRectOfBattleArea().left+base.getSprite().getGlobalBounds().height/8,getRectOfBattleArea().top+getRectOfBattleArea().height/2));
+}
+
+void Map::setScale(unsigned int windowHeigh)
+{
+    base.setScale(windowHeigh);
+}
+
 void Map::setCenter()
 {
     for(int i = 0 ; i<= 3; i++)
@@ -81,4 +91,13 @@ void Map::setPosition()
     battleArea.setPosition(background[0].getSprite().getGlobalBounds().left ,background[0].getSprite().getGlobalBounds().top/3);
 }
 
+Base * Map::getBase()
+{
+    return &base;
+}
+
+SmallTower * Map::getSmallTower()
+{
+    return &smallTower;
+}
 

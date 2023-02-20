@@ -33,23 +33,20 @@ int main()
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
-    Base base;
-    SmallTower smallTower;
+
+
     MediumTower mediumTower;
 
     MagicBall s;
 
-
-    base.setPosition(sf::Vector2f(map.getRectOfBattleArea().left+base.getSprite().getGlobalBounds().height/8,map.getRectOfBattleArea().top+map.getRectOfBattleArea().height/2));
-    base.setScale(window.getSize().y);
-
+    map.setScale(window.getSize().y);
 
     mediumTower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/4,map.getRectOfBattleArea().top));
     mediumTower.setScale(window.getSize().y);
 
 
-    smallTower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/3,map.getRectOfBattleArea().top));
-    smallTower.setScale(window.getSize().y);
+    map.getSmallTower()->setPosition(sf::Vector2f(map.getRectOfBattleArea().width/3,map.getRectOfBattleArea().top));
+    map.getSmallTower()->setScale(window.getSize().y);
     //smallTower.setHitBox();
 
     silverKnight.getSprite().setPosition(600,100);
@@ -207,27 +204,27 @@ int main()
         silverKnight.update(time);
         bronzeSoldier.update(time);
         blackKnight.update(time);
-        smallTower.update(time);
+        map.getSmallTower()->update(time);
         clock.restart();
 
         cam.update(bronzeSoldier.getSprite().getPosition(), map.getRectOfBattleArea());
         window.setView(cam.getView());
 
-        if(smallTower.onCollision(bronzeSoldier.getWeponHitBox()))
+        if(map.getSmallTower()->onCollision(bronzeSoldier.getWeponHitBox()))
         {
             bronzeSoldier.getDamage();
         }
-        if(smallTower.magicBallOnCollision(bronzeSoldier.getHitBox()))
+        if(map.getSmallTower()->magicBallOnCollision(bronzeSoldier.getHitBox()))
         {
             bronzeSoldier.getDamage();
         }
 
-        smallTower.enemyIsUderTower(&bronzeSoldier.getSprite().getPosition());
+        map.getSmallTower()->enemyIsUderTower(&bronzeSoldier.getSprite().getPosition());
 
         window.clear(sf::Color::Black);
 
-        print.addSprite(base.getSprite());
-        print.addSprite(smallTower.getSprite());
+        print.addSprite(map.getBase()->getSprite());
+        print.addSprite(map.getSmallTower()->getSprite());
         print.addSprite(mediumTower.getSprite());
 
         print.addSprite(map.getBackgroundSprite());
@@ -237,7 +234,7 @@ int main()
         print.addSprite(blackKnight.getSprite());
         print.addSprite(silverKnight.getSprite());
 
-        print.addSprite(smallTower.getMagicBallSprite());
+        print.addSprite(map.getSmallTower()->getMagicBallSprite());
 
         print.sort();
         print.draw(&window);
