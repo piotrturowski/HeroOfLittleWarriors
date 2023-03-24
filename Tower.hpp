@@ -22,6 +22,7 @@ protected:
     sf::Time totalTime;
     bool spawnCooldown;
     void checkCooldownIsDown(sf::Time deltaTime);
+    void setupMagicBallOriginal();
 public:
     Tower();
     void setHitBox();

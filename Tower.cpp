@@ -8,9 +8,14 @@ Tower::Tower()
     spawnBallTime = sf::seconds(0);
     totalTime = sf::seconds(0);
     spawnCooldown = true;
+    setupMagicBallOriginal();
+
+}
+
+void Tower::setupMagicBallOriginal()
+{
     magicBallOriginal.loadFromFile("art/Magic balls/Magic ball_1.png");
     magicBallOriginal.getSprite().setOrigin(magicBallOriginal.getSprite().getLocalBounds().width/2,magicBallOriginal.getSprite().getLocalBounds().height/2);
-
 }
 
 void Tower::setPosition(sf::Vector2f pos)

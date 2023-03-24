@@ -22,6 +22,8 @@ void Map::setup()
 void Map::setScale(unsigned int windowHeigh)
 {
     base.setScale(windowHeigh);
+    mediumTower.setScale(windowHeigh);
+    smallTower.setScale(windowHeigh);
 }
 
 void Map::setCenter()
@@ -89,6 +91,15 @@ void Map::setPosition()
         grass[i].getSprite().setPosition(i * grass[i].getSprite().getGlobalBounds().width,0);
     }
     battleArea.setPosition(background[0].getSprite().getGlobalBounds().left ,background[0].getSprite().getGlobalBounds().top/3);
+    setObjectPosition();
+}
+
+void Map::setObjectPosition()
+{
+    smallTower.setPosition(sf::Vector2f(getRectOfBattleArea().width/3,getRectOfBattleArea().top));
+    mediumTower.setPosition(sf::Vector2f(getRectOfBattleArea().width/4,getRectOfBattleArea().top));
+    base.setPosition(sf::Vector2f(getRectOfBattleArea().left,0));
+
 }
 
 Base * Map::getBase()
@@ -99,5 +110,10 @@ Base * Map::getBase()
 SmallTower * Map::getSmallTower()
 {
     return &smallTower;
+}
+
+MediumTower * Map::getMediumTower()
+{
+    return &mediumTower;
 }
 

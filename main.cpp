@@ -35,18 +35,15 @@ int main()
 
 
 
-    MediumTower mediumTower;
 
-    MagicBall s;
+
 
     map.setScale(window.getSize().y);
 
-    mediumTower.setPosition(sf::Vector2f(map.getRectOfBattleArea().width/4,map.getRectOfBattleArea().top));
-    mediumTower.setScale(window.getSize().y);
 
 
-    map.getSmallTower()->setPosition(sf::Vector2f(map.getRectOfBattleArea().width/3,map.getRectOfBattleArea().top));
-    map.getSmallTower()->setScale(window.getSize().y);
+
+
     //smallTower.setHitBox();
 
     silverKnight.getSprite().setPosition(600,100);
@@ -225,7 +222,7 @@ int main()
 
         print.addSprite(map.getBase()->getSprite());
         print.addSprite(map.getSmallTower()->getSprite());
-        print.addSprite(mediumTower.getSprite());
+        print.addSprite(map.getMediumTower()->getSprite());
 
         print.addSprite(map.getBackgroundSprite());
         print.draw(&window);
