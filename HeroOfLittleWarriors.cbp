@@ -73,6 +73,8 @@
 		<Unit filename="MediumTower.hpp" />
 		<Unit filename="Phisics.cpp" />
 		<Unit filename="Phisics.hpp" />
+		<Unit filename="Player.cpp" />
+		<Unit filename="Player.hpp" />
 		<Unit filename="Print.cpp" />
 		<Unit filename="Print.hpp" />
 		<Unit filename="SmallTower.cpp" />
@@ -83,6 +85,10 @@
 		<Unit filename="Sprite.hpp" />
 		<Unit filename="System.cpp" />
 		<Unit filename="System.hpp" />
+		<Unit filename="Team.cpp" />
+		<Unit filename="Team.hpp" />
+		<Unit filename="Teammate.cpp" />
+		<Unit filename="Teammate.hpp" />
 		<Unit filename="Tower.cpp" />
 		<Unit filename="Tower.hpp" />
 		<Unit filename="main.cpp" />

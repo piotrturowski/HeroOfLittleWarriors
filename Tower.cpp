@@ -79,7 +79,7 @@ void Tower::enemyIsUderTower(const sf::Vector2f *heroPos)
         {
 
             spawnMagicBall();
-            magicBall.back().setVectorTracking(heroPos);
+            magicBall.back().setTrackingVector(heroPos);
 
         }
 

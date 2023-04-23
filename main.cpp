@@ -15,6 +15,10 @@
 #include "MediumTower.hpp"
 #include "Base.hpp"
 #include "MagicBall.hpp"
+#include "Team.hpp"
+#include "Player.hpp"
+
+int Teammate::teammatesCounter = 0;
 
 int main()
 {
@@ -25,6 +29,15 @@ int main()
     cam.setSize(window.getSize());
     window.setView(cam.getView());
 
+    Team greenTeam;
+    Player player, player2;
+    player.setTeamSite(1);
+    player2.setTeamSite(1);
+    greenTeam.addTeammate(player.getTeammate());
+    greenTeam.addTeammate(player2.getTeammate());
+
+
+
     Map map;
     map.setWindowSize(window.getSize());
     map.setPosition();
@@ -33,15 +46,10 @@ int main()
     BlackKnight blackKnight;
     SilverKnight silverKnight;
 
-
-
-
+    player.addSoldier(&bronzeSoldier);
 
 
     map.setScale(window.getSize().y);
-
-
-
 
 
     //smallTower.setHitBox();

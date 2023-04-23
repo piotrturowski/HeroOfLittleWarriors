@@ -64,7 +64,7 @@ void MagicBall::setSwitchTime(float speed)
     switchTime = sf::seconds(speed);
 }
 
-void MagicBall::setVectorTracking(const sf::Vector2f * trackingVector )
+void MagicBall::setTrackingVector(const sf::Vector2f * trackingVector )
 {
     this->trackingVector = trackingVector;
 }
