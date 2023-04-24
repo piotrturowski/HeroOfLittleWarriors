@@ -48,7 +48,6 @@ int main()
 
     player.addSoldier(&bronzeSoldier);
 
-
     map.setScale(window.getSize().y);
 
 

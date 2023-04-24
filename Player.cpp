@@ -2,11 +2,14 @@
 
 Player::Player()
 {
-
+    soldier=NULL;
 }
 void Player::addSoldier(Soldier* soldier)
 {
-    soldier = soldier;
+    if(pointerSoldierIsEmpty())
+    {
+        this->soldier = soldier;
+    }
 }
 
 bool Player::getTeammateSite()
@@ -19,12 +22,23 @@ void Player::setTeamSite(bool teamSite)
     teammate.setTeamSite(teamSite);
 }
 
-const Teammate Player::getTeammate()
+Teammate Player::getTeammate()
 {
     return teammate;
 }
 
-const Soldier Player::getSoldier()
+Soldier Player::getSoldier()
 {
     return *soldier;
 }
+
+bool Player::pointerSoldierIsEmpty()
+{
+    if(soldier==NULL)
+    {
+        return true;
+    }
+    return false;
+}
+
+

@@ -9,12 +9,13 @@ class Player
 private:
     Soldier* soldier;
     Teammate teammate;
+    bool pointerSoldierIsEmpty();
 public:
     Player();
     void addSoldier(Soldier* soldier);
     bool getTeammateSite();
     void setTeamSite(bool teamSite);
-    const Soldier getSoldier();
-    const Teammate getTeammate();
+    Soldier getSoldier();
+    Teammate getTeammate();
 };
 #endif // PLAYER_HPP
