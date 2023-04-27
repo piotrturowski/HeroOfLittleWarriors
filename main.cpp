@@ -67,7 +67,11 @@ int main()
     blackKnight.setScale(window.getSize());
     silverKnight.setScale(window.getSize());
 
+    greenTeam.addTower(*map.getMediumTower());
+    greenTeam.addTower(*map.getMediumTower());
+    greenTeam.addBase(*map.getBase());
 
+    greenTeam.showTeamSquad();
 
     window.setFramerateLimit(60);
     while (window.isOpen())
