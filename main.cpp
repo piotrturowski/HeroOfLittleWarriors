@@ -24,10 +24,9 @@ int Teammate::teammatesCounter = 0;
 int main()
 {
     Button startButton;
+    startButton.setNameButton("Start");
 
-    sf::RectangleShape circle(sf::Vector2f(10,10));
-    circle.setFillColor(sf::Color::Red);
-
+    startButton.block();
 
     sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
 
@@ -116,24 +115,15 @@ int main()
                         }
                     case sf::Keyboard::Num1:
                         {
-                            startButton.swapTexture(0);
+                            startButton.unlock();
                             break;
                         }
-                        case sf::Keyboard::Num2:
+                    case sf::Keyboard::Num2:
                         {
-                            startButton.swapTexture(1);
+                            startButton.block();
                             break;
                         }
-                        case sf::Keyboard::Num3:
-                        {
-                            startButton.swapTexture(2);
-                            break;
-                        }
-                        case sf::Keyboard::Num4:
-                        {
-                            startButton.swapTexture(3);
-                            break;
-                        }
+
                 }
             }
             else if(event.type == sf::Event::KeyReleased)
@@ -280,9 +270,6 @@ int main()
 
         print.addSprite(map.getGrassSprite());
         print.draw(&window);
-
-        window.draw(circle);
-
 
 
         window.display();

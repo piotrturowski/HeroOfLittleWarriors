@@ -2,17 +2,18 @@
 
 Button::Button()
 {
+    sf::String name = "";
+    setNameButton(name);
     textSetup();
     loadTexture();
     textSetupUpdate();
     swapTexture(0);
+    unlock();
 
 }
 
 void Button::textSetup()
 {
-    word = "start";
-    text.setString(word);
     text.setCharacterSize(60);
     font.loadFromFile("art/Buttons/Super Foods.ttf");
     text.setFont(font);
@@ -81,12 +82,15 @@ void Button::swapTexture(int swapingStatus = 0)
 
 bool Button::isPressed(sf::RenderWindow * window)
 {
-    update(window);
-    std::cout << getTransformedMousePosition(window).x << std::endl << getTransformedMousePosition(window).y << std::endl << std::endl;
-    if(mouseIsInside(window)&&sf::Mouse::isButtonPressed(sf::Mouse::Left))
+
+    if(!isBlocked())
     {
-        swapTexture(2);
-        return true;
+        update(window);
+        if(mouseIsInside(window)&&sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        {
+            swapTexture(2);
+            return true;
+        }
     }
     return false;
 }
@@ -98,14 +102,19 @@ bool Button::mouseIsInside(sf::RenderWindow * window)
 
 sf::Vector2f Button::getTransformedMousePosition(sf::RenderWindow * window)
 {
-
     return window->mapPixelToCoords(sf::Mouse::getPosition(*window),window->getView());
 }
 
 sf::Sprite & Button::getSprite()
 {
-
     return sprite;
+}
+
+void Button::setNameButton(sf::String name)
+{
+    word = name;
+    text.setString(word);
+    textSetupUpdate();
 }
 
 void Button::update(sf::RenderWindow * window)
@@ -113,7 +122,6 @@ void Button::update(sf::RenderWindow * window)
     if(mouseIsInside(window))
     {
         swapTexture(1);
-
     }
     else
     {
@@ -122,5 +130,25 @@ void Button::update(sf::RenderWindow * window)
 
 }
 
+
+void Button::block()
+{
+    swapTexture(3);
+    blocked = true;
+}
+void Button::unlock()
+{
+    blocked = false;
+    swapTexture(0);
+}
+
+bool Button::isBlocked()
+{
+    if(blocked)
+    {
+        return true;
+    }
+    return false;
+}
 
 

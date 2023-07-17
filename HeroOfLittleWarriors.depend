@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1689603414 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1689607134 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"Soldier.hpp"
 	"textureSheet.hpp"
@@ -1836,10 +1836,10 @@
 1689412440 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\teammate.cpp
 	"Teammate.hpp"
 
-1689602993 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\button.cpp
+1689607067 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\button.cpp
 	"button.hpp"
 
-1689600756 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\button.hpp
+1689607444 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\button.hpp
 	<SFML/Graphics.hpp>
 	"GameObject.hpp"
 	<queue>

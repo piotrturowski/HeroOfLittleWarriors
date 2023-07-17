@@ -15,20 +15,24 @@ class Button
     sf::Text text;
     sf::Color unpressedColor;
     sf::Color PressedColor;
+
+    bool blocked;
     sf::Vector2f getTransformedMousePosition(sf::RenderWindow * window);
     bool loadTexture();
     bool mouseIsInside(sf::RenderWindow * window);
     void update(sf::RenderWindow * window);
     void textSetup();
     void textSetupUpdate();
-
+    void swapTexture(int swapingStatus);
    public:
 
     Button();
     bool isPressed(sf::RenderWindow * window);
-    void swapTexture(int swapingStatus);
+    void setNameButton(sf::String name);
+    void block();
+    void unlock();
+    bool isBlocked();
     sf::Sprite & getSprite();
-
 };
 
 #endif // BUTTON_HPP
