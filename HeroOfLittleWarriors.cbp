@@ -57,6 +57,7 @@
 		<Unit filename="BlackKnight.hpp" />
 		<Unit filename="BronzeSoldier.cpp" />
 		<Unit filename="BronzeSoldier.hpp" />
+		<Unit filename="Button.cpp" />
 		<Unit filename="Camera.cpp" />
 		<Unit filename="Camera.hpp" />
 		<Unit filename="GameObject.cpp" />
@@ -91,6 +92,7 @@
 		<Unit filename="Teammate.hpp" />
 		<Unit filename="Tower.cpp" />
 		<Unit filename="Tower.hpp" />
+		<Unit filename="button.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="silverKnight.cpp" />
 		<Unit filename="silverKnight.hpp" />

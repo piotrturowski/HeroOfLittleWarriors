@@ -11,6 +11,12 @@ void Print::addSprite(std::vector <sf::Sprite> sprite)
         spriteBuffer.push_back(sprite[i]);
 }
 
+void Print::addSprite(std::queue <sf::Sprite> sprite)
+{
+    while(!sprite.empty())
+        spriteBuffer.push_back(sprite.back());
+}
+
 void Print::sort()
 {
     for(int i=0;i<spriteBuffer.size();i++)

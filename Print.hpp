@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <iostream>
+#include <queue>
 
 class Print
 {
@@ -11,6 +12,7 @@ private:
 public:
     void addSprite(sf::Sprite sprite);
     void addSprite(std::vector <sf::Sprite> sprite);
+    void addSprite(std::queue <sf::Sprite> sprite);
     void sort();
     void draw(sf::RenderWindow * window);
 

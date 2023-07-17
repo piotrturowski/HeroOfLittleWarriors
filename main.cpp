@@ -17,17 +17,25 @@
 #include "MagicBall.hpp"
 #include "Team.hpp"
 #include "Player.hpp"
+#include "Button.hpp"
 
 int Teammate::teammatesCounter = 0;
 
 int main()
 {
+    Button startButton;
+
+    sf::RectangleShape circle(sf::Vector2f(10,10));
+    circle.setFillColor(sf::Color::Red);
+
+
     sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
 
     Print print;
     Camera cam;
     cam.setSize(window.getSize());
     window.setView(cam.getView());
+    {
 
     Team greenTeam;
     Player player, player2;
@@ -55,7 +63,7 @@ int main()
 
     silverKnight.getSprite().setPosition(600,100);
     blackKnight.getSprite().setPosition(500,0);
-    bronzeSoldier.getSprite().setPosition(sf::Vector2f(1500,0));
+    bronzeSoldier.getSprite().setPosition(sf::Vector2f(0,0));
 
 
     sf::Clock clock;
@@ -102,10 +110,30 @@ int main()
                             break;
                         }
                     case sf::Keyboard::F1:
-                    {
+                        {
 
-                        break;
-                    }
+                            break;
+                        }
+                    case sf::Keyboard::Num1:
+                        {
+                            startButton.swapTexture(0);
+                            break;
+                        }
+                        case sf::Keyboard::Num2:
+                        {
+                            startButton.swapTexture(1);
+                            break;
+                        }
+                        case sf::Keyboard::Num3:
+                        {
+                            startButton.swapTexture(2);
+                            break;
+                        }
+                        case sf::Keyboard::Num4:
+                        {
+                            startButton.swapTexture(3);
+                            break;
+                        }
                 }
             }
             else if(event.type == sf::Event::KeyReleased)
@@ -227,6 +255,7 @@ int main()
             bronzeSoldier.getDamage();
         }
 
+        startButton.isPressed(&window);
         map.getSmallTower()->enemyIsUderTower(&bronzeSoldier.getSprite().getPosition());
 
         window.clear(sf::Color::Black);
@@ -242,6 +271,8 @@ int main()
         print.addSprite(blackKnight.getSprite());
         print.addSprite(silverKnight.getSprite());
 
+        print.addSprite(startButton.getSprite());
+
         print.addSprite(map.getSmallTower()->getMagicBallSprite());
 
         print.sort();
@@ -250,8 +281,12 @@ int main()
         print.addSprite(map.getGrassSprite());
         print.draw(&window);
 
+        window.draw(circle);
+
+
+
         window.display();
     }
-
+    }
     return 0;
 }
