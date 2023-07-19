@@ -6,8 +6,10 @@ Button::Button()
     setNameButton(name);
     textSetup();
     loadTexture();
-    textSetupUpdate();
     swapTexture(0);
+    textSetupUpdate();
+    sprite.setOrigin(sprite.getGlobalBounds().width/2,sprite.getGlobalBounds().height/2);
+
     unlock();
 
 }
@@ -19,14 +21,15 @@ void Button::textSetup()
     text.setFont(font);
     PressedColor = sf::Color(153,102,51);
     unpressedColor = sf::Color(175,117,59);
+    text.setColor(unpressedColor);
 }
 
 void Button::textSetupUpdate()
 {
-    sprite.setOrigin(sprite.getGlobalBounds().width/2,sprite.getGlobalBounds().height/2);
-    text.setOrigin(-text.getGlobalBounds().width*3/5,-text.getGlobalBounds().height);
-    sprite.setPosition(0,0);
-    text.setPosition(0,0);
+
+    text.setOrigin(text.getGlobalBounds().width/2, text.getGlobalBounds().height/2);
+
+    text.setPosition(sprite.getGlobalBounds().width/1.4,sprite.getGlobalBounds().height/2);
 }
 
 bool Button::loadTexture()
@@ -39,41 +42,14 @@ bool Button::loadTexture()
 
 void Button::swapTexture(int swapingStatus = 0)
 {
-    sprite.setOrigin(0,0);
+    if(swapingStatus < 0 || swapingStatus > 3)
+    {
+        swapingStatus = 0;
+    }
+    tex.clear(sf::Color::Transparent);
     sf::Vector2u size(texture[0].getSize().x,texture[0].getSize().y);
     tex.create(size.x,size.y);
-    switch(swapingStatus)
-    {
-    case 0:
-        {
-            sprite.setTexture(texture[0]);
-            text.setColor(unpressedColor);
-            break;
-        }
-    case 1:
-        {
-            sprite.setTexture(texture[1]);
-            text.setColor(unpressedColor);
-            break;
-        }
-    case 2:
-        {
-            sprite.setTexture(texture[2]);
-            text.setColor(PressedColor);
-            break;
-        }
-    case 3:
-        {
-            sprite.setTexture(texture[3]);
-            break;
-        }
-    default:
-        {
-            sprite.setTexture(texture[0]);
-            break;
-        }
-    }
-    tex.draw(sprite);
+    tex.draw(sf::Sprite(texture[swapingStatus]));
     tex.draw(text);
     tex.display();
     sprite.setTexture(tex.getTexture());
@@ -112,8 +88,7 @@ sf::Sprite & Button::getSprite()
 
 void Button::setNameButton(sf::String name)
 {
-    word = name;
-    text.setString(word);
+    text.setString(name);
     textSetupUpdate();
 }
 
@@ -151,4 +126,20 @@ bool Button::isBlocked()
     return false;
 }
 
+void Button::setScale(float x)
+{
+    sprite.setScale(x,x);
+}
+
+
+void Button::setPosition(float x, float y)
+{
+    setPosition(sf::Vector2f(x,y));
+}
+
+template <typename T>
+void Button::setPosition(sf::Vector2<T> pos)
+{
+    sprite.setPosition(pos);
+}
 

@@ -5,14 +5,15 @@
 #include <queue>
 #include <iostream>
 
+
+
 class Button
 {
     sf::Texture texture[4];
     sf::Sprite sprite;
-    sf::String word;
     sf::Font font;
     sf::RenderTexture tex;
-    sf::Text text;
+
     sf::Color unpressedColor;
     sf::Color PressedColor;
 
@@ -32,7 +33,13 @@ class Button
     void block();
     void unlock();
     bool isBlocked();
+    void setScale(float x);
     sf::Sprite & getSprite();
+    sf::Text text;
+    void setPosition(float x, float y);
+
+    template <typename T>
+    void setPosition(sf::Vector2<T> pos);
 };
 
 #endif // BUTTON_HPP

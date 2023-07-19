@@ -545,26 +545,11 @@
 
 1673811416 c:\users\piotr\documents\github\herooflittlewarriors\human.hpp
 
-1682329698 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
+1689788108 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
-	"Soldier.hpp"
-	"textureSheet.hpp"
-	"Animation.hpp"
-	"BronzeSoldier.hpp"
-	"BlackKnight.hpp"
-	"silverKnight.hpp"
-	"HitBox.hpp"
-	"Background.hpp"
-	"Map.hpp"
-	"Camera.hpp"
-	"Print.hpp"
-	"Tower.hpp"
-	"SmallTower.hpp"
-	"MediumTower.hpp"
-	"Base.hpp"
-	"MagicBall.hpp"
-	"Team.hpp"
-	"Player.hpp"
+	"button.hpp"
+	"Game.hpp"
+	"Sprite.hpp"
 
 1673811416 c:\users\piotr\documents\github\herooflittlewarriors\silverknight.hpp
 	"Soldier.hpp"
@@ -1144,10 +1129,11 @@
 1679863960 source:c:\users\piotr\documents\github\herooflittlewarriors\gameobject.cpp
 	"GameObject.hpp"
 
-1679863960 c:\users\piotr\documents\github\herooflittlewarriors\print.hpp
+1689675176 c:\users\piotr\documents\github\herooflittlewarriors\print.hpp
 	<SFML/Graphics.hpp>
 	<vector>
 	<iostream>
+	<queue>
 
 1679863960 c:\users\piotr\documents\github\herooflittlewarriors\smalltower.hpp
 	"Tower.hpp"
@@ -1158,7 +1144,7 @@
 1679863960 source:c:\users\piotr\documents\github\herooflittlewarriors\mediumtower.cpp
 	"MediumTower.hpp"
 
-1679863960 source:c:\users\piotr\documents\github\herooflittlewarriors\print.cpp
+1689675176 source:c:\users\piotr\documents\github\herooflittlewarriors\print.cpp
 	"Print.hpp"
 
 1679863960 source:c:\users\piotr\documents\github\herooflittlewarriors\smalltower.cpp
@@ -1774,10 +1760,10 @@
 1676493379 source:c:\users\asplex\documents\github\herooflittlewarriors\magicball.cpp
 	"MagicBall.hpp"
 
-1682330047 source:c:\users\piotr\documents\github\herooflittlewarriors\team.cpp
+1682588607 source:c:\users\piotr\documents\github\herooflittlewarriors\team.cpp
 	"Team.hpp"
 
-1682327837 c:\users\piotr\documents\github\herooflittlewarriors\team.hpp
+1682588607 c:\users\piotr\documents\github\herooflittlewarriors\team.hpp
 	<iostream>
 	<string>
 	<vector>
@@ -1792,7 +1778,7 @@
 	"Teammate.hpp"
 	"Soldier.hpp"
 
-1682325703 c:\users\piotr\documents\github\herooflittlewarriors\teammate.hpp
+1689700685 c:\users\piotr\documents\github\herooflittlewarriors\teammate.hpp
 
 1682325703 source:c:\users\piotr\documents\github\herooflittlewarriors\teammate.cpp
 	"Teammate.hpp"
@@ -1844,4 +1830,37 @@
 	"GameObject.hpp"
 	<queue>
 	<iostream>
+
+1689788094 source:c:\users\piotr\documents\github\herooflittlewarriors\button.cpp
+	"button.hpp"
+
+1689787784 c:\users\piotr\documents\github\herooflittlewarriors\button.hpp
+	<SFML/Graphics.hpp>
+	"GameObject.hpp"
+	<queue>
+	<iostream>
+
+1689700613 source:c:\users\piotr\documents\github\herooflittlewarriors\game.cpp
+	"Game.hpp"
+
+1689700676 c:\users\piotr\documents\github\herooflittlewarriors\game.hpp
+	"Soldier.hpp"
+	"textureSheet.hpp"
+	"Animation.hpp"
+	"BronzeSoldier.hpp"
+	"BlackKnight.hpp"
+	"silverKnight.hpp"
+	"HitBox.hpp"
+	"Background.hpp"
+	"Map.hpp"
+	"Camera.hpp"
+	"Print.hpp"
+	"Tower.hpp"
+	"SmallTower.hpp"
+	"MediumTower.hpp"
+	"Base.hpp"
+	"MagicBall.hpp"
+	"Team.hpp"
+	"Player.hpp"
+	"Button.hpp"
 
