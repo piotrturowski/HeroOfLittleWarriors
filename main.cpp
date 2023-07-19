@@ -71,7 +71,6 @@ int main()
             }
         }
         window.setView(view);
-
         if(startButton.isPressed(&window))
         {
             game.loop(window,print);
@@ -82,7 +81,7 @@ int main()
         }
         if(exit.isPressed(&window))
         {
-
+            window.close();
         }
 
         window.clear(sf::Color::Black);
