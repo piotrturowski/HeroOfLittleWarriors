@@ -8,9 +8,14 @@ class AnimatedBackground
 {
 private:
     sf::RenderTexture renderTexture;
-    sf::Texture texture;
-    sf::Sprite sprite;
+    sf::Texture texture[2];
+    sf::Sprite sprite[2];
+    sf::Sprite mainSprite;
     void createReverseBackground();
+    void connectTwoSprites();
+    bool endSprite();
+    bool reverseI(int i);
+    void swap();
 
 public:
     AnimatedBackground();
@@ -18,5 +23,6 @@ public:
     void setWindowSize(sf::Vector2f windowSize);
     void move();
     sf::Sprite & getSprite();
+    sf::Sprite & getSecondSprite();
 };
 #endif // ANIMATEDBACKGROUND_HPP

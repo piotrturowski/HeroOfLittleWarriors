@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1689845439 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1689854412 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
 	"button.hpp"
 	"Game.hpp"
@@ -1873,10 +1873,10 @@
 1689838183 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\game.cpp
 	"Game.hpp"
 
-1689845485 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animatedbackground.cpp
+1689858040 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animatedbackground.cpp
 	"AnimatedBackground.hpp"
 
-1689845439 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animatedbackground.hpp
+1689858075 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animatedbackground.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 

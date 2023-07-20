@@ -24,7 +24,8 @@ int main()
     Game game;
 
 
-    sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");
+    sf::RenderWindow window(sf::VideoMode(1000, 700), "Hero of Little Warriors");\
+    //window.setFramerateLimit(1);
     Print print;
     sf::View view;
     window.setView(view);
@@ -72,6 +73,11 @@ int main()
                             view.zoom(0.5);
                             break;
                         }
+                    case sf::Keyboard::F1:
+                        {
+
+                            break;
+                        }
 
                 }
             }
@@ -89,12 +95,13 @@ int main()
         {
             window.close();
         }
-
         animatedBackground.move();
 
         window.clear(sf::Color::Black);
 
         window.draw(animatedBackground.getSprite());
+        window.draw(animatedBackground.getSecondSprite());
+
         window.draw(logo.getSprite());
         window.draw(startButton.getSprite());
         window.draw(settings.getSprite());

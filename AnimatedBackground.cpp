@@ -7,7 +7,7 @@ AnimatedBackground::AnimatedBackground()
 
 void AnimatedBackground::loadImage(sf::String name)
 {
-    if(!texture.loadFromFile(name))
+    if(!texture[0].loadFromFile(name))
     {
         std::cout << "error can't load Texture " << std::endl;
     }
@@ -16,42 +16,86 @@ void AnimatedBackground::loadImage(sf::String name)
 
 void AnimatedBackground::createReverseBackground()
 {
-    renderTexture.create(texture.getSize().x*2,texture.getSize().y);
-    renderTexture.clear(sf::Color::Transparent);
 
-    sf::Sprite sprite(texture);
-
-    renderTexture.draw(sprite);
-
-    sf::Image image = texture.copyToImage();
-
+    sf::Image image = texture[0].copyToImage();
     image.flipHorizontally();
 
-    texture.loadFromImage(image);
-    sprite.setTexture(texture);
+    texture[1].loadFromImage(image);
 
-    sprite.setPosition(sprite.getGlobalBounds().width,0);
+    for(int i = 0 ; i<2; i++)
+        sprite[i].setTexture(texture[i]);
 
-    renderTexture.draw(sprite);
-
-    renderTexture.display();
-    this->sprite.setTexture(renderTexture.getTexture());
 }
 
 sf::Sprite & AnimatedBackground::getSprite()
 {
-    return sprite;
+    return sprite[0];
+}
+
+sf::Sprite & AnimatedBackground::getSecondSprite()
+{
+    return sprite[1];
 }
 
 
 void AnimatedBackground::setWindowSize(sf::Vector2f windowSize)
 {
-    float scale = windowSize.y/sprite.getLocalBounds().height;
-    sprite.setScale(scale,scale);
+    float scale = windowSize.y/sprite[0].getLocalBounds().height;
+    for(int i = 0; i<2;i++)
+        sprite[i].setScale(scale,scale);
+
+    connectTwoSprites();
+
+}
+
+void AnimatedBackground::connectTwoSprites()
+{
+    sprite[1].setPosition(sprite[0].getPosition().x + sprite[0].getGlobalBounds().width,sprite[0].getPosition().y);
+}
+
+bool AnimatedBackground::endSprite()
+{
+    for(int i = 0; i<2;i++)
+    {
+        if(sprite[i].getPosition().x <= -sprite[i].getGlobalBounds().width);
+        {
+
+            return true;
+        }
+    }
+    return false;
+}
+
+void AnimatedBackground::swap()
+{
+    for(int i = 0; i<2;i++)
+    {
+        if(sprite[i].getPosition().x < -sprite[i].getGlobalBounds().width)
+        {
+            sprite[i].setPosition(sprite[reverseI(i)].getPosition().x+sprite[reverseI(i)].getGlobalBounds().width,0);
+        }
+    }
+
+}
+
+bool AnimatedBackground::reverseI(int i)
+{
+    bool j = i;
+
+    return !j;
 }
 
 void AnimatedBackground::move()
 {
-    sprite.move(-1,0);
+    for(int i = 0; i<2;i++)
+    {
+        sprite[i].move(-0.5,0);
+    }
+    if(endSprite())
+    {
+        swap();
+    }
 }
+
+
 
