@@ -1,25 +1,10 @@
 # depslib dependency file v1.0
-1689607134 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
+1689845439 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\main.cpp
 	<SFML/Graphics.hpp>
-	"Soldier.hpp"
-	"textureSheet.hpp"
-	"Animation.hpp"
-	"BronzeSoldier.hpp"
-	"BlackKnight.hpp"
-	"silverKnight.hpp"
-	"HitBox.hpp"
-	"Background.hpp"
-	"Map.hpp"
-	"Camera.hpp"
-	"Print.hpp"
-	"Tower.hpp"
-	"SmallTower.hpp"
-	"MediumTower.hpp"
-	"Base.hpp"
-	"MagicBall.hpp"
-	"Team.hpp"
-	"Player.hpp"
-	"Button.hpp"
+	"button.hpp"
+	"Game.hpp"
+	"Sprite.hpp"
+	"AnimatedBackground.hpp"
 
 1525812018 c:\users\ula\onedrive\dokumenty\projekty\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -490,7 +475,7 @@
 1689412440 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\soldier.cpp
 	"Soldier.hpp"
 
-1673464531 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\sprite.cpp
+1689839972 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\sprite.cpp
 	"Sprite.hpp"
 	<iostream>
 
@@ -1015,7 +1000,7 @@
 1675024088 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\hitbox.hpp
 	<SFML/Graphics.hpp>
 
-1689412440 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
+1689841250 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.cpp
 	"Map.hpp"
 
 1689412440 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\map.hpp
@@ -1806,7 +1791,7 @@
 	"Teammate.hpp"
 	"Soldier.hpp"
 
-1689412440 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\teammate.hpp
+1689838183 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\teammate.hpp
 
 1689412440 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\team.cpp
 	"Team.hpp"
@@ -1822,10 +1807,10 @@
 1689412440 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\teammate.cpp
 	"Teammate.hpp"
 
-1689607067 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\button.cpp
+1689838183 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\button.cpp
 	"button.hpp"
 
-1689607444 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\button.hpp
+1689838183 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\button.hpp
 	<SFML/Graphics.hpp>
 	"GameObject.hpp"
 	<queue>
@@ -1863,4 +1848,35 @@
 	"Team.hpp"
 	"Player.hpp"
 	"Button.hpp"
+
+1689838183 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\game.hpp
+	"Soldier.hpp"
+	"textureSheet.hpp"
+	"Animation.hpp"
+	"BronzeSoldier.hpp"
+	"BlackKnight.hpp"
+	"silverKnight.hpp"
+	"HitBox.hpp"
+	"Background.hpp"
+	"Map.hpp"
+	"Camera.hpp"
+	"Print.hpp"
+	"Tower.hpp"
+	"SmallTower.hpp"
+	"MediumTower.hpp"
+	"Base.hpp"
+	"MagicBall.hpp"
+	"Team.hpp"
+	"Player.hpp"
+	"Button.hpp"
+
+1689838183 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\game.cpp
+	"Game.hpp"
+
+1689845485 source:c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animatedbackground.cpp
+	"AnimatedBackground.hpp"
+
+1689845439 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animatedbackground.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
 

@@ -2,6 +2,7 @@
 #include "button.hpp"
 #include "Game.hpp"
 #include "Sprite.hpp"
+#include "AnimatedBackground.hpp"
 
 int Teammate::teammatesCounter = 0;
 
@@ -27,6 +28,11 @@ int main()
     Print print;
     sf::View view;
     window.setView(view);
+
+    AnimatedBackground animatedBackground;
+    animatedBackground.loadImage("art/Backgrounds/game_Background_3/game_Background_3.png");
+    animatedBackground.setWindowSize(view.getSize());
+
 
     Sprite logo("art/Logo/Logo.png");
 
@@ -84,9 +90,11 @@ int main()
             window.close();
         }
 
+        animatedBackground.move();
+
         window.clear(sf::Color::Black);
 
-
+        window.draw(animatedBackground.getSprite());
         window.draw(logo.getSprite());
         window.draw(startButton.getSprite());
         window.draw(settings.getSprite());

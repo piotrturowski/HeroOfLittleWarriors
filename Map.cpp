@@ -8,7 +8,7 @@ Map::Map()
         grass[i].loadBackground("art/Backgrounds/game_background_2/layers/front_decor.png");
 
     }
-    battleArea.setFillColor(sf::Color::Yellow);
+    battleArea.setFillColor(sf::Color::Black);
     setCenter();
 
 
