@@ -39,6 +39,6 @@ public:
 
 
     Game();
-    void loop(sf::RenderWindow & window, Print print);
+    void run(sf::RenderWindow & window, Print print);
 };
 #endif // GAME_HPP

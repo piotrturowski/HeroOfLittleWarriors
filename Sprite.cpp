@@ -1,6 +1,11 @@
 #include "Sprite.hpp"
 #include <iostream>
 
+Sprite::Sprite()
+{
+
+}
+
 Sprite::Sprite(std::string path)
 {
     setTexture(path);

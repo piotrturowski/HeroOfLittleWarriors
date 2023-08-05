@@ -7,6 +7,7 @@
 class Sprite
 {
 public:
+    Sprite();
     Sprite(std::string path);
     sf::Sprite &getSprite();
     void setTexture(std::string path);

@@ -530,11 +530,8 @@
 
 1673811416 c:\users\piotr\documents\github\herooflittlewarriors\human.hpp
 
-1689789431 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
-	<SFML/Graphics.hpp>
-	"button.hpp"
-	"Game.hpp"
-	"Sprite.hpp"
+1691272542 source:c:\users\piotr\documents\github\herooflittlewarriors\main.cpp
+	"MainMenu.hpp"
 
 1673811416 c:\users\piotr\documents\github\herooflittlewarriors\silverknight.hpp
 	"Soldier.hpp"
@@ -563,11 +560,11 @@
 1680437054 source:c:\users\piotr\documents\github\herooflittlewarriors\soldier.cpp
 	"Soldier.hpp"
 
-1673811416 source:c:\users\piotr\documents\github\herooflittlewarriors\sprite.cpp
+1691273006 source:c:\users\piotr\documents\github\herooflittlewarriors\sprite.cpp
 	"Sprite.hpp"
 	<iostream>
 
-1673811416 c:\users\piotr\documents\github\herooflittlewarriors\sprite.hpp
+1691273006 c:\users\piotr\documents\github\herooflittlewarriors\sprite.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -1012,7 +1009,7 @@
 	"SmallTower.hpp"
 	"MediumTower.hpp"
 
-1679863960 source:c:\users\piotr\documents\github\herooflittlewarriors\map.cpp
+1689859933 source:c:\users\piotr\documents\github\herooflittlewarriors\map.cpp
 	"Map.hpp"
 
 1679863960 c:\users\piotr\documents\github\herooflittlewarriors\map.hpp
@@ -1825,10 +1822,10 @@
 	<queue>
 	<iostream>
 
-1689700613 source:c:\users\piotr\documents\github\herooflittlewarriors\game.cpp
+1691273763 source:c:\users\piotr\documents\github\herooflittlewarriors\game.cpp
 	"Game.hpp"
 
-1689700676 c:\users\piotr\documents\github\herooflittlewarriors\game.hpp
+1691273763 c:\users\piotr\documents\github\herooflittlewarriors\game.hpp
 	"Soldier.hpp"
 	"textureSheet.hpp"
 	"Animation.hpp"
@@ -1879,4 +1876,21 @@
 1689858075 c:\users\ula\onedrive\dokumenty\projekty\herooflittlewarriors\herooflittlewarriors\animatedbackground.hpp
 	<SFML/Graphics.hpp>
 	<iostream>
+
+1689859933 c:\users\piotr\documents\github\herooflittlewarriors\animatedbackground.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1689859933 source:c:\users\piotr\documents\github\herooflittlewarriors\animatedbackground.cpp
+	"AnimatedBackground.hpp"
+
+1691274998 c:\users\piotr\documents\github\herooflittlewarriors\mainmenu.hpp
+	<SFML/Graphics.hpp>
+	"button.hpp"
+	"Game.hpp"
+	"Sprite.hpp"
+	"AnimatedBackground.hpp"
+
+1691274642 source:c:\users\piotr\documents\github\herooflittlewarriors\mainmenu.cpp
+	"MainMenu.hpp"
 

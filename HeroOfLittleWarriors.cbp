@@ -70,6 +70,8 @@
 		<Unit filename="Human.hpp" />
 		<Unit filename="MagicBall.cpp" />
 		<Unit filename="MagicBall.hpp" />
+		<Unit filename="MainMenu.cpp" />
+		<Unit filename="MainMenu.hpp" />
 		<Unit filename="ManagerAnimation.cpp" />
 		<Unit filename="ManagerAnimation.hpp" />
 		<Unit filename="Map.cpp" />

@@ -5,7 +5,7 @@ Game::Game()
 
 }
 
-void Game::loop(sf::RenderWindow & window,Print print)
+void Game::run(sf::RenderWindow & window,Print print)
 {
     cam.setSize(window.getSize());
     window.setView(cam.getView());
