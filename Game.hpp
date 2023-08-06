@@ -26,7 +26,6 @@
 
 class Game
 {
-public:
     Camera cam;
     Team greenTeam;
     Player player, player2;
@@ -37,8 +36,12 @@ public:
     sf::Clock clock;
     sf::Time time;
 
-
-    Game();
+    void setup(sf::RenderWindow & window);
+    void input(sf::RenderWindow & window);
+    void logic(sf::RenderWindow & window);
+    void collision();
+    void draw(sf::RenderWindow & window,Print & print);
+public:
     void run(sf::RenderWindow & window, Print print);
 };
 #endif // GAME_HPP
